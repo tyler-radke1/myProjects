@@ -9,12 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var wordList = ["misspell", "pharaoh", "weird", "intelligence", "pronunciation", "handkerchief", "iogorrhea", "chiaroscurist", "gobbledegook", "conscientoius"]
+    var wordList = ["misspell", "pharaoh", "weird", "intelligence", "pronunciation", "handkerchief", "iogorrhea", "chiaroscurist", "gobbledegook", "conscientious"]
     
-    let incorrectGuessesAllowed = 5
+    let incorrectGuessesAllowed = 6
     
-    var totalWins = 0
-    var totalLosses = 0
+    var totalWins = 0 {
+        didSet {
+            newRound()
+        }
+    }
+    var totalLosses = 0 {
+        didSet {
+            newRound()
+        }
+    }
     var currentGame: Game!
     
     @IBOutlet weak var treeImage: UIImageView!
@@ -32,16 +40,36 @@ class ViewController: UIViewController {
     
     
     func newRound() {
-        let newWord = wordList.removeFirst()
-        correctWord.text = newWord
+        let newWord = wordList.randomElement()
         
-        currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectGuessesAllowed, guessedLetters: [])
+        for button in letterButtons {
+            button.isEnabled = true
+        }
+    
+    currentGame = Game(word: newWord!, incorrectMovesRemaining: incorrectGuessesAllowed, guessedLetters: [])
+        updateUI()
         
     }
    
+    func winCheck() {
+        currentGame.formattedWordUpdate()
+        
+        if currentGame.incorrectMovesRemaining == 0 {
+            totalLosses += 1
+        } else if currentGame.formattedWord == currentGame.word {
+            totalWins += 1
+        } else {
+            updateUI()
+        }
+        
+        
+    }
     
     func updateUI() {
         scoreLabel.text = "Wins: \(totalWins), Losses: \(totalLosses)"
+        currentGame.formattedWordUpdate()
+        correctWord.text = currentGame.formattedWord
+        
         
         treeImage.image = UIImage(named: "Tree \(currentGame.incorrectMovesRemaining)")
     }
@@ -52,11 +80,16 @@ class ViewController: UIViewController {
         sender.isEnabled = false
         let letterString = sender.configuration!.title!
         let letter = Character(letterString.lowercased())
-        print(currentGame.guessedLetters)
+        
+        currentGame.guessedLetters.append(letter)
+        
+        if !currentGame.word.contains(letter) {
+            currentGame.incorrectMovesRemaining-=1
+        }
+        
+        winCheck()
         
     }
-    
-    
     
 }
 
