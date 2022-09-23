@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "be1a1acb283a702b99b630f586877ba02234b4cb",
+        "version" : "7.3.2"
+      }
+    },
+    {
+      "identity" : "ryanspokemonpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ryanplitt/RyansPokemonPackage",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6e7384b4abf437a7dcea645c2e6acad4a3c787ac"
+      }
+    }
+  ],
+  "version" : 2
+}
