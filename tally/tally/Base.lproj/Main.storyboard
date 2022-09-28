@@ -140,7 +140,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9g1-Wd-Dfh" kind="show" id="xZJ-p5-b6C"/>
+                        <segue destination="9g1-Wd-Dfh" kind="show" identifier="boardToSettings" id="xZJ-p5-b6C"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="PWe-74-AMb"/>
                         <segue destination="9g1-Wd-Dfh" kind="relationship" relationship="viewControllers" id="nmJ-cG-vWf"/>
                     </connections>

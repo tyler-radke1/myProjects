@@ -42,8 +42,9 @@ class SettingsViewController: ViewController {
             resetTo = value
         }
         
- 
+        
     }
+    
     
     /*
     // MARK: - Navigation

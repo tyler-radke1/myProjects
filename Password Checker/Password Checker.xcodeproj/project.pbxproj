@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FF1A0B828E3328A005718AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1A0B728E3328A005718AE /* AppDelegate.swift */; };
+		9FF1A0BA28E3328A005718AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1A0B928E3328A005718AE /* SceneDelegate.swift */; };
+		9FF1A0BC28E3328A005718AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1A0BB28E3328A005718AE /* ViewController.swift */; };
+		9FF1A0BF28E3328A005718AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF1A0BD28E3328A005718AE /* Main.storyboard */; };
+		9FF1A0C128E3328C005718AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF1A0C028E3328C005718AE /* Assets.xcassets */; };
+		9FF1A0C428E3328C005718AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF1A0C228E3328C005718AE /* LaunchScreen.storyboard */; };
+		9FF1A0CF28E3328D005718AE /* Password_CheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1A0CE28E3328D005718AE /* Password_CheckerTests.swift */; };
+		9FF1A0D928E3328D005718AE /* Password_CheckerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1A0D828E3328D005718AE /* Password_CheckerUITests.swift */; };
+		9FF1A0DB28E3328D005718AE /* Password_CheckerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1A0DA28E3328D005718AE /* Password_CheckerUITestsLaunchTests.swift */; };
+		9FF1A0E828E339C7005718AE /* FailedPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1A0E728E339C7005718AE /* FailedPassViewController.swift */; };
+		9FF1A0EA28E339DC005718AE /* SuccessPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1A0E928E339DC005718AE /* SuccessPassViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FF1A0CB28E3328D005718AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FF1A0AC28E3328A005718AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FF1A0B328E3328A005718AE;
+			remoteInfo = "Password Checker";
+		};
+		9FF1A0D528E3328D005718AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FF1A0AC28E3328A005718AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FF1A0B328E3328A005718AE;
+			remoteInfo = "Password Checker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9FF1A0B428E3328A005718AE /* Password Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Password Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FF1A0B728E3328A005718AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9FF1A0B928E3328A005718AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9FF1A0BB28E3328A005718AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9FF1A0BE28E3328A005718AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FF1A0C028E3328C005718AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FF1A0C328E3328C005718AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9FF1A0C528E3328C005718AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FF1A0CA28E3328D005718AE /* Password CheckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Password CheckerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FF1A0CE28E3328D005718AE /* Password_CheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password_CheckerTests.swift; sourceTree = "<group>"; };
+		9FF1A0D428E3328D005718AE /* Password CheckerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Password CheckerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FF1A0D828E3328D005718AE /* Password_CheckerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password_CheckerUITests.swift; sourceTree = "<group>"; };
+		9FF1A0DA28E3328D005718AE /* Password_CheckerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password_CheckerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9FF1A0E728E339C7005718AE /* FailedPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedPassViewController.swift; sourceTree = "<group>"; };
+		9FF1A0E928E339DC005718AE /* SuccessPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessPassViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FF1A0B128E3328A005718AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FF1A0C728E3328D005718AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FF1A0D128E3328D005718AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FF1A0AB28E3328A005718AE = {
+			isa = PBXGroup;
+			children = (
+				9FF1A0B628E3328A005718AE /* Password Checker */,
+				9FF1A0CD28E3328D005718AE /* Password CheckerTests */,
+				9FF1A0D728E3328D005718AE /* Password CheckerUITests */,
+				9FF1A0B528E3328A005718AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FF1A0B528E3328A005718AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FF1A0B428E3328A005718AE /* Password Checker.app */,
+				9FF1A0CA28E3328D005718AE /* Password CheckerTests.xctest */,
+				9FF1A0D428E3328D005718AE /* Password CheckerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FF1A0B628E3328A005718AE /* Password Checker */ = {
+			isa = PBXGroup;
+			children = (
+				9FF1A0B728E3328A005718AE /* AppDelegate.swift */,
+				9FF1A0B928E3328A005718AE /* SceneDelegate.swift */,
+				9FF1A0BB28E3328A005718AE /* ViewController.swift */,
+				9FF1A0BD28E3328A005718AE /* Main.storyboard */,
+				9FF1A0E928E339DC005718AE /* SuccessPassViewController.swift */,
+				9FF1A0E728E339C7005718AE /* FailedPassViewController.swift */,
+				9FF1A0C028E3328C005718AE /* Assets.xcassets */,
+				9FF1A0C228E3328C005718AE /* LaunchScreen.storyboard */,
+				9FF1A0C528E3328C005718AE /* Info.plist */,
+			);
+			path = "Password Checker";
+			sourceTree = "<group>";
+		};
+		9FF1A0CD28E3328D005718AE /* Password CheckerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FF1A0CE28E3328D005718AE /* Password_CheckerTests.swift */,
+			);
+			path = "Password CheckerTests";
+			sourceTree = "<group>";
+		};
+		9FF1A0D728E3328D005718AE /* Password CheckerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9FF1A0D828E3328D005718AE /* Password_CheckerUITests.swift */,
+				9FF1A0DA28E3328D005718AE /* Password_CheckerUITestsLaunchTests.swift */,
+			);
+			path = "Password CheckerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FF1A0B328E3328A005718AE /* Password Checker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FF1A0DE28E3328D005718AE /* Build configuration list for PBXNativeTarget "Password Checker" */;
+			buildPhases = (
+				9FF1A0B028E3328A005718AE /* Sources */,
+				9FF1A0B128E3328A005718AE /* Frameworks */,
+				9FF1A0B228E3328A005718AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Password Checker";
+			productName = "Password Checker";
+			productReference = 9FF1A0B428E3328A005718AE /* Password Checker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9FF1A0C928E3328D005718AE /* Password CheckerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FF1A0E128E3328D005718AE /* Build configuration list for PBXNativeTarget "Password CheckerTests" */;
+			buildPhases = (
+				9FF1A0C628E3328D005718AE /* Sources */,
+				9FF1A0C728E3328D005718AE /* Frameworks */,
+				9FF1A0C828E3328D005718AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FF1A0CC28E3328D005718AE /* PBXTargetDependency */,
+			);
+			name = "Password CheckerTests";
+			productName = "Password CheckerTests";
+			productReference = 9FF1A0CA28E3328D005718AE /* Password CheckerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9FF1A0D328E3328D005718AE /* Password CheckerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FF1A0E428E3328D005718AE /* Build configuration list for PBXNativeTarget "Password CheckerUITests" */;
+			buildPhases = (
+				9FF1A0D028E3328D005718AE /* Sources */,
+				9FF1A0D128E3328D005718AE /* Frameworks */,
+				9FF1A0D228E3328D005718AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FF1A0D628E3328D005718AE /* PBXTargetDependency */,
+			);
+			name = "Password CheckerUITests";
+			productName = "Password CheckerUITests";
+			productReference = 9FF1A0D428E3328D005718AE /* Password CheckerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FF1A0AC28E3328A005718AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					9FF1A0B328E3328A005718AE = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					9FF1A0C928E3328D005718AE = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 9FF1A0B328E3328A005718AE;
+					};
+					9FF1A0D328E3328D005718AE = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 9FF1A0B328E3328A005718AE;
+					};
+				};
+			};
+			buildConfigurationList = 9FF1A0AF28E3328A005718AE /* Build configuration list for PBXProject "Password Checker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FF1A0AB28E3328A005718AE;
+			productRefGroup = 9FF1A0B528E3328A005718AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FF1A0B328E3328A005718AE /* Password Checker */,
+				9FF1A0C928E3328D005718AE /* Password CheckerTests */,
+				9FF1A0D328E3328D005718AE /* Password CheckerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FF1A0B228E3328A005718AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FF1A0C428E3328C005718AE /* LaunchScreen.storyboard in Resources */,
+				9FF1A0C128E3328C005718AE /* Assets.xcassets in Resources */,
+				9FF1A0BF28E3328A005718AE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FF1A0C828E3328D005718AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FF1A0D228E3328D005718AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FF1A0B028E3328A005718AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FF1A0E828E339C7005718AE /* FailedPassViewController.swift in Sources */,
+				9FF1A0BC28E3328A005718AE /* ViewController.swift in Sources */,
+				9FF1A0B828E3328A005718AE /* AppDelegate.swift in Sources */,
+				9FF1A0EA28E339DC005718AE /* SuccessPassViewController.swift in Sources */,
+				9FF1A0BA28E3328A005718AE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FF1A0C628E3328D005718AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FF1A0CF28E3328D005718AE /* Password_CheckerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FF1A0D028E3328D005718AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FF1A0D928E3328D005718AE /* Password_CheckerUITests.swift in Sources */,
+				9FF1A0DB28E3328D005718AE /* Password_CheckerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FF1A0CC28E3328D005718AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FF1A0B328E3328A005718AE /* Password Checker */;
+			targetProxy = 9FF1A0CB28E3328D005718AE /* PBXContainerItemProxy */;
+		};
+		9FF1A0D628E3328D005718AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FF1A0B328E3328A005718AE /* Password Checker */;
+			targetProxy = 9FF1A0D528E3328D005718AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9FF1A0BD28E3328A005718AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FF1A0BE28E3328A005718AE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9FF1A0C228E3328C005718AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FF1A0C328E3328C005718AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FF1A0DC28E3328D005718AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9FF1A0DD28E3328D005718AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FF1A0DF28E3328D005718AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Password Checker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = bundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9FF1A0E028E3328D005718AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Password Checker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = bundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9FF1A0E228E3328D005718AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QUPJTJNU5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.Password-CheckerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Password Checker.app/Password Checker";
+			};
+			name = Debug;
+		};
+		9FF1A0E328E3328D005718AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QUPJTJNU5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.Password-CheckerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Password Checker.app/Password Checker";
+			};
+			name = Release;
+		};
+		9FF1A0E528E3328D005718AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QUPJTJNU5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.Password-CheckerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Password Checker";
+			};
+			name = Debug;
+		};
+		9FF1A0E628E3328D005718AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QUPJTJNU5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.Password-CheckerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Password Checker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FF1A0AF28E3328A005718AE /* Build configuration list for PBXProject "Password Checker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FF1A0DC28E3328D005718AE /* Debug */,
+				9FF1A0DD28E3328D005718AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FF1A0DE28E3328D005718AE /* Build configuration list for PBXNativeTarget "Password Checker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FF1A0DF28E3328D005718AE /* Debug */,
+				9FF1A0E028E3328D005718AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FF1A0E128E3328D005718AE /* Build configuration list for PBXNativeTarget "Password CheckerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FF1A0E228E3328D005718AE /* Debug */,
+				9FF1A0E328E3328D005718AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FF1A0E428E3328D005718AE /* Build configuration list for PBXNativeTarget "Password CheckerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FF1A0E528E3328D005718AE /* Debug */,
+				9FF1A0E628E3328D005718AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FF1A0AC28E3328A005718AE /* Project object */;
+}
