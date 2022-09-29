@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var specialChars = "@,.!#$%^&*<>?+=-"
-    
+    var validUser = false
     
     
     @IBOutlet weak var errorLabel: UILabel!
@@ -23,8 +23,39 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //function that checks the username. It's in its own function just to make the login function a little bit cleaner
+    func userCheck() {
+        //checks the username
+        //essentially the same logic as the password check but for emails
+        
+        if let userCheck = usernameTextFieldObject.text {
+            var hasAt = false
+            var hasPeriod = false
+            
+            for letter in userCheck {
+                hasAt = (letter == "@") ? true : false
+                if hasAt { break}
+            }
+            
+            for letter in userCheck {
+                if (hasAt) {
+                    hasPeriod = (letter == ".") ? true : false
+                    if hasPeriod { break }
+                }
+            }
+            
+            if (hasAt && hasPeriod) {
+                validUser = true
+                
+            } else {
+                errorLabel.text = "Not a valid email address"
+            }
+        }
+    }
+    
     @IBAction func loginButton(_ sender: UIButton) {
-        errorLabel.text = ""
+        
+        //errorLabel.text = ""
         let passAttempt = passwordTextFieldObject.text!
         var hasLower = false
         var hasUpper = false
@@ -69,7 +100,10 @@ class ViewController: UIViewController {
         
         //if it passed, logs in. If it doesn't returns the error
         if (passed) {
-            performSegue(withIdentifier: "goodPassword", sender: nil)
+            userCheck()
+            
+            if (passed && validUser) { performSegue(withIdentifier: "goodPassword", sender: nil) }
+            
             
             //if it fails, gives the error message for the corresponding fail type
         } else {
@@ -86,23 +120,6 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func usernameTyped(_ sender: UITextField) {
-        var userCheck = sender.text!
-        var hasAt = false
-        
-        for letter in userCheck {
-            if letter ==
-                "@" {
-                hasAt = true
-            }
-            
-            
-        }
-        
-        
-    }
+  
     
 }
-
-
-
