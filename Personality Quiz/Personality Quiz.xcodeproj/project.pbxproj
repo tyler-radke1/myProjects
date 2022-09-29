@@ -16,6 +16,9 @@
 		9F46AAE728E5DDC800E52B47 /* Personality_QuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46AAE628E5DDC800E52B47 /* Personality_QuizTests.swift */; };
 		9F46AAF128E5DDC800E52B47 /* Personality_QuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46AAF028E5DDC800E52B47 /* Personality_QuizUITests.swift */; };
 		9F46AAF328E5DDC800E52B47 /* Personality_QuizUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46AAF228E5DDC800E52B47 /* Personality_QuizUITestsLaunchTests.swift */; };
+		9F46AB0028E5E50700E52B47 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46AAFF28E5E50700E52B47 /* QuestionsViewController.swift */; };
+		9F46AB0228E5E73400E52B47 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46AB0128E5E73400E52B47 /* ResultsViewController.swift */; };
+		9F46AB0428E5EA5600E52B47 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46AB0328E5EA5600E52B47 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		9F46AAEC28E5DDC800E52B47 /* Personality QuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Personality QuizUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F46AAF028E5DDC800E52B47 /* Personality_QuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personality_QuizUITests.swift; sourceTree = "<group>"; };
 		9F46AAF228E5DDC800E52B47 /* Personality_QuizUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personality_QuizUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F46AAFF28E5E50700E52B47 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		9F46AB0128E5E73400E52B47 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		9F46AB0328E5EA5600E52B47 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				9F46AAD128E5DDC600E52B47 /* SceneDelegate.swift */,
 				9F46AAD328E5DDC600E52B47 /* ViewController.swift */,
 				9F46AAD528E5DDC600E52B47 /* Main.storyboard */,
+				9F46AB0328E5EA5600E52B47 /* Question.swift */,
+				9F46AB0128E5E73400E52B47 /* ResultsViewController.swift */,
+				9F46AAFF28E5E50700E52B47 /* QuestionsViewController.swift */,
 				9F46AAD828E5DDC800E52B47 /* Assets.xcassets */,
 				9F46AADA28E5DDC800E52B47 /* LaunchScreen.storyboard */,
 				9F46AADD28E5DDC800E52B47 /* Info.plist */,
@@ -260,6 +269,9 @@
 			files = (
 				9F46AAD428E5DDC600E52B47 /* ViewController.swift in Sources */,
 				9F46AAD028E5DDC600E52B47 /* AppDelegate.swift in Sources */,
+				9F46AB0028E5E50700E52B47 /* QuestionsViewController.swift in Sources */,
+				9F46AB0428E5EA5600E52B47 /* Question.swift in Sources */,
+				9F46AB0228E5E73400E52B47 /* ResultsViewController.swift in Sources */,
 				9F46AAD228E5DDC600E52B47 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
