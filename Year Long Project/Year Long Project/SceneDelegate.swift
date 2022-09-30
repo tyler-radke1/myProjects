@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  yearLongProject
+//  Year Long Project
 //
 //  Created by Tyler Radke on 9/30/22.
 //

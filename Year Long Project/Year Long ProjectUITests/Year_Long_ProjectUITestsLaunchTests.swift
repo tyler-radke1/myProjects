@@ -1,13 +1,13 @@
 //
-//  yearLongProjectUITestsLaunchTests.swift
-//  yearLongProjectUITests
+//  Year_Long_ProjectUITestsLaunchTests.swift
+//  Year Long ProjectUITests
 //
 //  Created by Tyler Radke on 9/30/22.
 //
 
 import XCTest
 
-class yearLongProjectUITestsLaunchTests: XCTestCase {
+class Year_Long_ProjectUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
