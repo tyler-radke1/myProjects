@@ -5,19 +5,18 @@ func twoSums(nums: [Int], target: Int) -> [Int] {
     
     
     for (index, value) in nums.enumerated() {
-        solution.append(index)
         
         for (ind, val) in nums.enumerated() {
             if (ind != index && val + value == target) {
+                solution.append(index)
                 solution.append(ind)
                 return solution
             }
         }
         
         
+        
     }
-    
-    
     
     return solution
     
