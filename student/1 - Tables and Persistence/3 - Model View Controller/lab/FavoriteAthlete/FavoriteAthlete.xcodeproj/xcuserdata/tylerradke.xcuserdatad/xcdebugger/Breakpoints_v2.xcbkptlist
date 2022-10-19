@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D59961FE-5D9C-4963-AE32-8B3B7A1F69A4"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C4FCFD0-61F7-40CA-B8C6-0221C306892D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FavoriteAthlete/AthleteTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "681CEE8F-EF3C-49AD-8F30-8E23BEFB85CB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FavoriteAthlete/AthleteTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "delegateMethod(athlete:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6BB60262-3F3A-4170-B214-C4F1F2E2673E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FavoriteAthlete/AthleteTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "delegateMethod(athlete:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F483E4AB-2030-439E-A4E4-F46A197E4518"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FavoriteAthlete/AthleteTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "editAthleteSegue(_:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CFA884BF-CB4D-4CFD-B50D-2C6313B31B4C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FavoriteAthlete/AthleteTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "editAthleteSegue(_:sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CFA884BF-CB4D-4CFD-B50D-2C6313B31B4C - df5944e8f497b60f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FavoriteAthlete.AthleteTableViewController.editAthleteSegue(_: __C.NSCoder, sender: Swift.Optional&lt;Any&gt;) -&gt; Swift.Optional&lt;FavoriteAthlete.AthleteFormViewController&gt;"
+                  moduleName = "FavoriteAthlete"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tylerradke/Desktop/Projects/student/1%20-%20Tables%20and%20Persistence/3%20-%20Model%20View%20Controller/lab/FavoriteAthlete/FavoriteAthlete/AthleteTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1196">
+               </Location>
+               <Location
+                  uuid = "CFA884BF-CB4D-4CFD-B50D-2C6313B31B4C - df5944e8f497b60f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FavoriteAthlete.AthleteTableViewController.editAthleteSegue(_: __C.NSCoder, sender: Swift.Optional&lt;Any&gt;) -&gt; Swift.Optional&lt;FavoriteAthlete.AthleteFormViewController&gt;"
+                  moduleName = "FavoriteAthlete"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tylerradke/Desktop/Projects/student/1%20-%20Tables%20and%20Persistence/3%20-%20Model%20View%20Controller/lab/FavoriteAthlete/FavoriteAthlete/AthleteTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
