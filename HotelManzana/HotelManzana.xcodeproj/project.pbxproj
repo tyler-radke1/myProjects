@@ -15,6 +15,7 @@
 		18AC05E323BFAFDE0043C96B /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC05E223BFAFDE0043C96B /* Registration.swift */; };
 		18AC05E923C000120043C96B /* RoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC05E823C000120043C96B /* RoomType.swift */; };
 		18AC05ED23C00C1A0043C96B /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC05EC23C00C1A0043C96B /* RegistrationTableViewController.swift */; };
+		9FA27B4729097B0000D4BE7B /* AddRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA27B4629097B0000D4BE7B /* AddRegistrationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		18AC05E223BFAFDE0043C96B /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		18AC05E823C000120043C96B /* RoomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomType.swift; sourceTree = "<group>"; };
 		18AC05EC23C00C1A0043C96B /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
+		9FA27B4629097B0000D4BE7B /* AddRegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegistrationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				18AC05DC23BFAF7D0043C96B /* Info.plist */,
 				18AC05EC23C00C1A0043C96B /* RegistrationTableViewController.swift */,
+				9FA27B4629097B0000D4BE7B /* AddRegistrationTableViewController.swift */,
 				18AC05CE23BFAF7B0043C96B /* AppDelegate.swift */,
 				18AC05E223BFAFDE0043C96B /* Registration.swift */,
 				18AC05E823C000120043C96B /* RoomType.swift */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA27B4729097B0000D4BE7B /* AddRegistrationTableViewController.swift in Sources */,
 				18AC05CF23BFAF7B0043C96B /* AppDelegate.swift in Sources */,
 				18AC05E323BFAFDE0043C96B /* Registration.swift in Sources */,
 				18AC05E923C000120043C96B /* RoomType.swift in Sources */,
