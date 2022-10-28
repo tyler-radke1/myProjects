@@ -7,7 +7,9 @@
 
 import UIKit
 
-class AddRegistrationTableViewController: UITableViewController {
+class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeTableViewControllerDelegate {
+    
+    
     
     @IBOutlet weak var firstNameTextField: UITextField!
     
@@ -22,6 +24,20 @@ class AddRegistrationTableViewController: UITableViewController {
     @IBOutlet weak var checkOutDateLabel: UILabel!
     
     @IBOutlet weak var checkOutDatePicker: UIDatePicker!
+    
+    @IBOutlet weak var adultsCounter: UILabel!
+    
+    @IBOutlet weak var adultsStepper: UIStepper!
+    
+    @IBOutlet weak var childrenCounter: UILabel!
+    
+    @IBOutlet weak var childrenStepper: UIStepper!
+    
+    @IBOutlet weak var wifiSwitch: UISwitch!
+    
+    @IBOutlet weak var roomTypeDetailLabel: UITableViewCell!
+    
+    var roomType: RoomType?
     
     let checkInDatePickerIndexPath = IndexPath(row: 1, section: 1)
     let checkInDateLabelIndexPath = IndexPath(row: 0, section: 1)
@@ -48,6 +64,9 @@ class AddRegistrationTableViewController: UITableViewController {
         checkInDatePicker.minimumDate = midnight
         checkInDatePicker.date = midnight
         
+        
+        updateNumberOfGuests()
+        updateRoomType()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -67,6 +86,8 @@ class AddRegistrationTableViewController: UITableViewController {
         print("Checkin \(checkOutDatePicker.date), checkout \(checkOutDatePicker.date)")
     }
     
+    
+    //Custom Functions
     func updateDateViews() {
         checkOutDatePicker.minimumDate = Calendar.current.date(byAdding: .day, value: 1, to: checkInDatePicker.date)
         
@@ -76,11 +97,38 @@ class AddRegistrationTableViewController: UITableViewController {
         
     }
     
+    func updateNumberOfGuests() {
+        adultsCounter.text = "\(Int(adultsStepper.value))"
+        
+        childrenCounter.text = "\(Int(childrenStepper.value))"
+        
+    }
+    
     
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {
         updateDateViews()
     }
     
+    @IBAction func wifiSwitched(_ sender: UISwitch) {
+    }
+    
+    
+    @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        updateNumberOfGuests()
+    }
+    
+    func updateRoomType() {
+        if let roomType = roomType {
+            roomTypeDetailLabel.detailTextLabel?.text = "\(roomType.name)"
+        } else {
+            roomTypeDetailLabel.detailTextLabel?.text = "Select a room"
+        }
+    }
+    
+    func selectRoomTypeTableViewController(_ controller: SelectRoomTypeTableViewController, didSelect roomType: RoomType) {
+        self.roomType = roomType
+        updateRoomType()
+    }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath {
         case checkInDatePickerIndexPath where isCheckInDatePickerVisible == false: return 0
@@ -90,6 +138,18 @@ class AddRegistrationTableViewController: UITableViewController {
         
         
     }
+    
+    @IBSegueAction func selectRoomType(_ coder: NSCoder) -> SelectRoomTypeTableViewController? {
+        let selectRoomTypeController = SelectRoomTypeTableViewController(coder: coder)
+        selectRoomTypeController?.delegate? = self
+        
+        selectRoomTypeController?.selectedRoomType = roomType
+        
+        return selectRoomTypeController
+        
+      
+    }
+    //table view functions
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath {

@@ -16,6 +16,7 @@
 		18AC05E923C000120043C96B /* RoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC05E823C000120043C96B /* RoomType.swift */; };
 		18AC05ED23C00C1A0043C96B /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC05EC23C00C1A0043C96B /* RegistrationTableViewController.swift */; };
 		9FA27B4729097B0000D4BE7B /* AddRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA27B4629097B0000D4BE7B /* AddRegistrationTableViewController.swift */; };
+		9FE08250290AD77500590F4D /* SelectRoomTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE0824F290AD77500590F4D /* SelectRoomTypeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		18AC05E823C000120043C96B /* RoomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomType.swift; sourceTree = "<group>"; };
 		18AC05EC23C00C1A0043C96B /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
 		9FA27B4629097B0000D4BE7B /* AddRegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegistrationTableViewController.swift; sourceTree = "<group>"; };
+		9FE0824F290AD77500590F4D /* SelectRoomTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoomTypeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				18AC05DC23BFAF7D0043C96B /* Info.plist */,
+				9FE0824F290AD77500590F4D /* SelectRoomTypeTableViewController.swift */,
 				18AC05EC23C00C1A0043C96B /* RegistrationTableViewController.swift */,
 				9FA27B4629097B0000D4BE7B /* AddRegistrationTableViewController.swift */,
 				18AC05CE23BFAF7B0043C96B /* AppDelegate.swift */,
@@ -151,6 +154,7 @@
 				18AC05E323BFAFDE0043C96B /* Registration.swift in Sources */,
 				18AC05E923C000120043C96B /* RoomType.swift in Sources */,
 				18AC05D123BFAF7B0043C96B /* SceneDelegate.swift in Sources */,
+				9FE08250290AD77500590F4D /* SelectRoomTypeTableViewController.swift in Sources */,
 				18AC05ED23C00C1A0043C96B /* RegistrationTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,7 +231,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -281,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
