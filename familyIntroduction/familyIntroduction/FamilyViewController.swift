@@ -5,11 +5,13 @@
 //  Created by Tyler Radke on 9/23/22.
 //
 
+
 import UIKit
 
 class FamilyViewController: ViewController {
-
     
+    
+    var currentFamilyMember: FamilyMember?
     
     @IBOutlet weak var familyLabel: UILabel!
     
@@ -17,31 +19,37 @@ class FamilyViewController: ViewController {
     
     @IBOutlet weak var picOfFamily: UIImageView!
     
-    func familyUpdate() {
-        
-        familyLabel.text = currentFamily.name
-        aboutFamilyTextView.text = currentFamily.description
-        picOfFamily.image = UIImage(named: "\(currentFamily.name)")
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let currentFamilyMember = currentFamilyMember {
+            familyLabel.text = currentFamilyMember.name
+            aboutFamilyTextView.text = currentFamilyMember.description
+            picOfFamily.image = UIImage(named: currentFamilyMember.name)
+        }
         
     }
-
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        familyUpdate()
+       // guard let currentFamilyMember = currentFamilyMember else { return }
+        
+       
+        
     }
+    
+
     
     
     
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

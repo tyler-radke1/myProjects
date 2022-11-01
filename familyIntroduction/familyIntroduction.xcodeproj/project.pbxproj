@@ -17,7 +17,9 @@
 		9F49A96628DE058500CF32B0 /* familyIntroductionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F49A96528DE058500CF32B0 /* familyIntroductionTests.swift */; };
 		9F49A97028DE058500CF32B0 /* familyIntroductionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F49A96F28DE058500CF32B0 /* familyIntroductionUITests.swift */; };
 		9F49A97228DE058500CF32B0 /* familyIntroductionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F49A97128DE058500CF32B0 /* familyIntroductionUITestsLaunchTests.swift */; };
-		9F49A97F28DE0ADC00CF32B0 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F49A97E28DE0ADB00CF32B0 /* Global.swift */; };
+		9F49A97F28DE0ADC00CF32B0 /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F49A97E28DE0ADB00CF32B0 /* FamilyMember.swift */; };
+		9FB98E6429102503005EE410 /* FamilyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB98E6329102503005EE410 /* FamilyTableViewController.swift */; };
+		9FB98E6A291026B1005EE410 /* FamilyMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB98E68291026B1005EE410 /* FamilyMemberCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,9 @@
 		9F49A96B28DE058500CF32B0 /* familyIntroductionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = familyIntroductionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F49A96F28DE058500CF32B0 /* familyIntroductionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = familyIntroductionUITests.swift; sourceTree = "<group>"; };
 		9F49A97128DE058500CF32B0 /* familyIntroductionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = familyIntroductionUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		9F49A97E28DE0ADB00CF32B0 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		9F49A97E28DE0ADB00CF32B0 /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
+		9FB98E6329102503005EE410 /* FamilyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTableViewController.swift; sourceTree = "<group>"; };
+		9FB98E69291026B1005EE410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/FamilyMemberCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +107,14 @@
 		9F49A94D28DE058400CF32B0 /* familyIntroduction */ = {
 			isa = PBXGroup;
 			children = (
+				9FB98E6329102503005EE410 /* FamilyTableViewController.swift */,
 				9F49A94E28DE058400CF32B0 /* AppDelegate.swift */,
 				9F49A95028DE058400CF32B0 /* SceneDelegate.swift */,
 				9F49A95228DE058400CF32B0 /* ViewController.swift */,
 				9F49A95428DE058400CF32B0 /* Main.storyboard */,
+				9FB98E68291026B1005EE410 /* FamilyMemberCell.swift */,
 				9F04425D28DEC8AE00B23862 /* FamilyViewController.swift */,
-				9F49A97E28DE0ADB00CF32B0 /* Global.swift */,
+				9F49A97E28DE0ADB00CF32B0 /* FamilyMember.swift */,
 				9F49A95728DE058500CF32B0 /* Assets.xcassets */,
 				9F49A95928DE058500CF32B0 /* LaunchScreen.storyboard */,
 				9F49A95C28DE058500CF32B0 /* Info.plist */,
@@ -265,8 +271,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F49A95328DE058400CF32B0 /* ViewController.swift in Sources */,
+				9FB98E6A291026B1005EE410 /* FamilyMemberCell.swift in Sources */,
 				9F49A94F28DE058400CF32B0 /* AppDelegate.swift in Sources */,
-				9F49A97F28DE0ADC00CF32B0 /* Global.swift in Sources */,
+				9F49A97F28DE0ADC00CF32B0 /* FamilyMember.swift in Sources */,
+				9FB98E6429102503005EE410 /* FamilyTableViewController.swift in Sources */,
 				9F49A95128DE058400CF32B0 /* SceneDelegate.swift in Sources */,
 				9F04425E28DEC8AE00B23862 /* FamilyViewController.swift in Sources */,
 			);
@@ -319,6 +327,14 @@
 				9F49A95A28DE058500CF32B0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9FB98E68291026B1005EE410 /* FamilyMemberCell.swift */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FB98E69291026B1005EE410 /* Base */,
+			);
+			name = FamilyMemberCell.swift;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

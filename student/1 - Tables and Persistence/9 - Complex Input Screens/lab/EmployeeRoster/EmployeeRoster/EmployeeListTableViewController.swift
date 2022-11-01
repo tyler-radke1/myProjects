@@ -1,14 +1,21 @@
 
 import UIKit
 
-class EmployeeListTableViewController: UITableViewController, EmployeeDetailTableViewControllerDelegate {
+class EmployeeListTableViewController: UITableViewController, EmployeeDetailTableViewControllerDelegate, EmployeeTypeTableViewControllerDelegate {
     
+
+    var employeeType: EmployeeType?
     var employees: [Employee] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
+    
+    func didSelect(employeeType: EmployeeType) {
+        self.employeeType = employeeType
+    }
+    
         
     // MARK: - Table view data source
     
@@ -60,6 +67,17 @@ class EmployeeListTableViewController: UITableViewController, EmployeeDetailTabl
     @IBAction func unwindToEmployeeList(segue: UIStoryboardSegue) {
         tableView.reloadData()
     }
+    @IBSegueAction func showEmployeeTypes(_ coder: NSCoder) -> EmployeeTypeTableViewController? {
+        
+        let employeeTypeTableViewController = EmployeeTypeTableViewController(coder: coder)
+        
+        employeeTypeTableViewController?.delegate = self
+        
+        return employeeTypeTableViewController
+        
+    }
+    
+   
     
     // MARK: - EmployeeDetailTableViewControllerDelegate
     

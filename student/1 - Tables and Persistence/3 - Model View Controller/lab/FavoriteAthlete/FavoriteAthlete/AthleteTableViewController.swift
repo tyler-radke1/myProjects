@@ -60,9 +60,7 @@ class AthleteTableViewController:  UITableViewController, AthleteTableViewDelega
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
-    }
+    
   
 
     func delegateMethod(athlete: Athlete) {
