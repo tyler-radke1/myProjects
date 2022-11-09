@@ -16,6 +16,7 @@
 		9F1DB38F2914AF1000582091 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DB38E2914AF0F00582091 /* ListTableViewController.swift */; };
 		9F1DB3912914AF3D00582091 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DB3902914AF3D00582091 /* List.swift */; };
 		9F1DB3932914B1DB00582091 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DB3922914B1DB00582091 /* TaskCell.swift */; };
+		9F7FED2129196D1600CB4675 /* AddTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7FED2029196D1600CB4675 /* AddTaskTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9F1DB38E2914AF0F00582091 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		9F1DB3902914AF3D00582091 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		9F1DB3922914B1DB00582091 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		9F7FED2029196D1600CB4675 /* AddTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		9F1DB3772914AE8800582091 /* toDoList */ = {
 			isa = PBXGroup;
 			children = (
+				9F7FED2029196D1600CB4675 /* AddTaskTableViewController.swift */,
 				9F1DB3782914AE8800582091 /* AppDelegate.swift */,
 				9F1DB37A2914AE8800582091 /* SceneDelegate.swift */,
 				9F1DB37C2914AE8800582091 /* ViewController.swift */,
@@ -150,6 +153,7 @@
 				9F1DB37D2914AE8800582091 /* ViewController.swift in Sources */,
 				9F1DB3792914AE8800582091 /* AppDelegate.swift in Sources */,
 				9F1DB37B2914AE8800582091 /* SceneDelegate.swift in Sources */,
+				9F7FED2129196D1600CB4675 /* AddTaskTableViewController.swift in Sources */,
 				9F1DB3912914AF3D00582091 /* List.swift in Sources */,
 				9F1DB3932914B1DB00582091 /* TaskCell.swift in Sources */,
 				9F1DB38F2914AF1000582091 /* ListTableViewController.swift in Sources */,

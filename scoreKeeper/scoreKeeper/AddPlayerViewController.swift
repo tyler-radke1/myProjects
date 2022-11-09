@@ -19,6 +19,7 @@ class AddPlayerViewController: UIViewController {
     @IBOutlet weak var addScoreTextField: UITextField!
     
     @IBOutlet weak var colorWell: UIColorWell!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
