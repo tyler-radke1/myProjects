@@ -40,6 +40,7 @@
                                 <connections>
                                     <outlet property="taskDoneSwitch" destination="XfO-r7-eIM" id="PrH-XY-6Ba"/>
                                     <outlet property="taskTitleLabel" destination="XSN-Ba-f3P" id="UhB-ae-qUG"/>
+                                    <segue destination="Gw3-w5-oWh" kind="show" identifier="segueToAddTask" destinationCreationSelector="segueToAddTask:sender:" id="yPW-h8-Qdu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -53,7 +54,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="A28-g6-5Ts"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="vFO-MF-hdJ">
                             <connections>
-                                <segue destination="948-aq-uT2" kind="presentation" destinationCreationSelector="segueFunction:" id="yI6-If-SEX"/>
+                                <segue destination="948-aq-uT2" kind="presentation" identifier="" destinationCreationSelector="segueFunction:" id="yI6-If-SEX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -68,7 +69,7 @@
             <objects>
                 <tableViewController id="Gw3-w5-oWh" customClass="AddTaskTableViewController" customModule="toDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="YUa-Jd-kCT">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
@@ -167,13 +168,13 @@
                     <navigationItem key="navigationItem" title="Add Task" largeTitleDisplayMode="never" id="dBY-Pa-dGU">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="7td-nt-UAD">
                             <connections>
-                                <segue destination="86G-vW-EMj" kind="unwind" unwindAction="unwindToListWithSegue:" id="k7u-Qk-7pU"/>
+                                <segue destination="86G-vW-EMj" kind="unwind" unwindAction="unwindToListWithSegue:" id="6l4-1i-ABq"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ob9-C8-Dcc">
                             <connections>
                                 <action selector="saveButtonTapped:" destination="Gw3-w5-oWh" id="DHc-Rr-nXb"/>
-                                <segue destination="86G-vW-EMj" kind="unwind" identifier="saveUnwind" unwindAction="unwindToListWithSegue:" id="mlt-HU-Kah"/>
+                                <segue destination="86G-vW-EMj" kind="unwind" identifier="unwindToList" unwindAction="unwindToListWithSegue:" id="TaR-RM-YO1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -205,7 +206,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yw-Gp-Yh9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2477" y="10"/>
+            <point key="canvasLocation" x="2508" y="-6"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eyp-Q7-ePL">
@@ -226,6 +227,9 @@
             <point key="canvasLocation" x="701.53846153846155" y="9.9526066350710902"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yPW-h8-Qdu"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">

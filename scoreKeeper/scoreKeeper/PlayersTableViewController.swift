@@ -40,6 +40,7 @@ class PlayersTableViewController: UITableViewController, PlayerPassing, PlayerTa
     
     func updateTableView(stepper: Double, row: Int, playerToUpdate: Player) {
         players[row].score = Int(stepper)
+        
         let withAnimation = (players == players.sorted()) ? false : true
         players.sort()
         

@@ -16,7 +16,7 @@ class AddTaskTableViewController: UITableViewController {
 
     
     
-    var delegate: DatePassingProtocol?
+    var taskToPass: Task?
     
     @IBOutlet weak var titleTextField: UITextField!
     
@@ -36,10 +36,16 @@ class AddTaskTableViewController: UITableViewController {
         updateSaveButton()
         isCompleteButton.setImage(UIImage(systemName: "circle"), for: .normal)
         isCompleteButton.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .selected)
-        
-        
-        
         dueDatePicker.date = Date().addingTimeInterval(24*60*60)
+        
+        
+        if let taskToPass = taskToPass {
+            titleTextField.text = taskToPass.title
+            isCompleteButton.isSelected = taskToPass.isCompleted
+            dueDatePicker.date = taskToPass.dueDate
+            notesTextView.text = taskToPass.notes
+            
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -64,7 +70,14 @@ class AddTaskTableViewController: UITableViewController {
          
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let taskToPass.id 
+        
+        if let titleText = titleTextField.text, let notesText = notesTextView.text {
+            taskToPass = Task(id: UUID(), title: titleText, isCompleted: isCompleteButton.isSelected, dueDate: dueDatePicker.date, notes: notesText)
+        }
+        
+    }
  
     @IBAction func titleTextFieldChanged(_ sender: UITextField) {
         updateSaveButton()
@@ -85,11 +98,7 @@ class AddTaskTableViewController: UITableViewController {
     }
     
     
-    @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
-        delegate?.protocolFuction(taskToPass: Task(id: UUID(), title: titleTextField.text?, isCompleted: isCompleteButton.isSelected))
-        
-    }
-    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        @IBAction func datePickerChanged(_ sender: UIDatePicker) {
         updateDateLabel(date: sender.date)
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
