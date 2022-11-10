@@ -53,10 +53,6 @@ struct Emoji: Codable {
        //Using a guard here makes it so it checks for emojis.JSON, and if it doesn't exist uses defaultEmojis
        guard let data: Data = try? Data(contentsOf: saveLocation) else { return defaultEmojis }
        
-     
-    
-      
-       
         do {
             let emojisArray: [Emoji] = try JSONDecoder().decode([Emoji].self, from: data)
             newEmojis = emojisArray

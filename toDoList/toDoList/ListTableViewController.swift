@@ -7,14 +7,17 @@
 
 import UIKit
 
-class ListTableViewController: UITableViewController {
+class ListTableViewController: UITableViewController, TaskCellDelegate {
+  
     
     
-    var tasks: [Task] = Task.loadSampleTasks()
+    
+    var tasks: [Task] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tasks = Task.loadFromFile()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -25,10 +28,12 @@ class ListTableViewController: UITableViewController {
     
     @IBAction func unwindToList(segue: UIStoryboardSegue) {
         guard segue.identifier == "unwindToList" else { return }
+        
         let sourceViewController = segue.source as! AddTaskTableViewController
         
         if let taskToSend = sourceViewController.taskToPass {
             tasks.append(taskToSend)
+            
             tableView.reloadData()
         }
         
@@ -46,13 +51,32 @@ class ListTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
         addTaskTableViewController?.taskToPass =  tasks[indexPath.row]
+        tasks.remove(at: indexPath.row)
         
         return addTaskTableViewController
         
         
     }
         
+  
+    
+    func checkMarkTapped(sender: TaskCell) {
+      
+        //sender.isDoneButton.isSelected.toggle()
         
+        if let indexPath = tableView.indexPath(for: sender) {
+            
+            var task = tasks[indexPath.row]
+            task.isCompleted.toggle()
+            tasks[indexPath.row] = task
+            tableView.reloadRows(at: [indexPath], with: .none)
+           
+            Task.saveToFile(tasks: tasks)
+        }
+        
+        
+    }
+
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -73,8 +97,13 @@ class ListTableViewController: UITableViewController {
         
         // Configure the cell...
         cell.taskTitleLabel.text = task.title
-        cell.taskDoneSwitch.setOn((task.isCompleted), animated: false)
+        cell.isDoneBool = tasks[indexPath.row].isCompleted
         cell.currentTask = task
+        cell.delegate = self
+        
+        cell.currentTask = task
+        
+        Task.saveToFile(tasks: tasks)
         
         return cell
     }
@@ -104,31 +133,13 @@ class ListTableViewController: UITableViewController {
         }
     }
     
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    override func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        Task.saveToFile(tasks: tasks)
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+    }
+ 
     
     
 }

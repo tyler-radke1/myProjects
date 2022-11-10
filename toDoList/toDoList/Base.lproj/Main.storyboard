@@ -24,10 +24,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XfO-r7-eIM">
-                                            <rect key="frame" x="321" y="26" width="49" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </switch>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSN-Ba-f3P">
                                             <rect key="frame" x="20" y="21" width="154" height="39"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -35,10 +31,24 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8H-Ho-RvO">
+                                            <rect key="frame" x="328.33333333333331" y="25.333333333333332" width="49.666666666666686" height="34.333333333333343"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="">
+                                                <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="large"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="isDoneButtonTapped:" destination="cMu-6B-4hj" eventType="touchUpInside" id="FFi-Jw-LXs"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="U8H-Ho-RvO" firstAttribute="trailing" secondItem="khl-tb-pNB" secondAttribute="trailingMargin" constant="8" id="2P9-kB-jPo"/>
+                                        <constraint firstItem="U8H-Ho-RvO" firstAttribute="centerY" secondItem="khl-tb-pNB" secondAttribute="centerY" id="iMz-fd-hpV"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="taskDoneSwitch" destination="XfO-r7-eIM" id="PrH-XY-6Ba"/>
+                                    <outlet property="isDoneButton" destination="U8H-Ho-RvO" id="8L3-6v-Pam"/>
                                     <outlet property="taskTitleLabel" destination="XSN-Ba-f3P" id="UhB-ae-qUG"/>
                                     <segue destination="Gw3-w5-oWh" kind="show" identifier="segueToAddTask" destinationCreationSelector="segueToAddTask:sender:" id="yPW-h8-Qdu"/>
                                 </connections>
@@ -206,7 +216,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yw-Gp-Yh9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2508" y="-6"/>
+            <point key="canvasLocation" x="2502" y="-92"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eyp-Q7-ePL">
@@ -232,6 +242,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
