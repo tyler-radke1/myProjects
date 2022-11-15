@@ -39,7 +39,6 @@ class AddPlayerViewController: UIViewController {
     @IBAction func addPlayerTapped(_ sender: Any) {
         let playerToSend = Player(name: addNameTextField.text ?? "New Player", score: Int(addScoreTextField.text ?? "0") ?? 0, profileColor: colorWell.selectedColor ?? .blue)
     
-        
         delegate?.passPlayer(player: playerToSend)
         
         self.dismiss(animated: true)

@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 
 struct Player: Comparable {
-// struct Player: Comparable, Identifiable {
-//    let id = UUID() // universally unique identifier
     static func < (lhs: Player, rhs: Player) -> Bool {
         return lhs.score > rhs.score
     }

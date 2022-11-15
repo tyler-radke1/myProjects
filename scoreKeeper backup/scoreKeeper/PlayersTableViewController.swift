@@ -6,50 +6,43 @@
 //
 
 import UIKit
-protocol playersTableViewControllerDelegate {
-    func passPlayerToGame()
-}
-
 
 class PlayersTableViewController: UITableViewController, PlayerPassing, PlayerTableViewCellDelegate {
    
-   
-
-    @IBOutlet weak var currentGameLabel: UILabel!
     
-    var currentGame: Game?
-    var players : [Player] = []
-    var delegate: playersTableViewControllerDelegate?
+   
+    
+
+    var players = Player.players
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        currentGame?.players.sort()
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+        players.sort()
         tableView.reloadData()
-        
-        currentGameLabel.text = "\(currentGame?.gameTitle ?? "Game")"
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        players = currentGame!.players
-        
         tableView.reloadData()
     }
     
     func passPlayer(player: Player) {
-        currentGame?.players.append(player)
-        currentGame?.setGameWinner()
+        playerxpend(player)
+        players.sort()
         tableView.reloadData()
-        delegate?.passPlayerToGame()
+        
     }
     
     func updateTableView(stepper: Double, row: Int, playerToUpdate: Player) {
-        currentGame?.players[row].score = Int(stepper)
+        players[row].score = Int(stepper)
         
         let withAnimation = (players == players.sorted()) ? false : true
-        currentGame?.players.sort()
+        players.sort()
         
         tableView.reloadSections([0], with: (withAnimation) ? .automatic : .none )
         
@@ -76,7 +69,7 @@ class PlayersTableViewController: UITableViewController, PlayerPassing, PlayerTa
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return currentGame?.players.count ?? 0
+        return players.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -86,22 +79,19 @@ class PlayersTableViewController: UITableViewController, PlayerPassing, PlayerTa
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath) as! PlayerTableViewCell
-         
-        if let players = currentGame?.players {
-                cell.delegate = self
-                cell.row = indexPath.row
-            
-                cell.playerBeingEdited = players[indexPath.row]
-                cell.playerImageView.tintColor = players[indexPath.row].profileColor
-                cell.playerStepper.value = Double(players[indexPath.row].score)
-               
-                cell.playerNameLabel.text = players[indexPath.row].name
-                cell.playerScoreCounter.text = "\(Int(cell.playerStepper.value))"
-               
-                return cell
-        }
         
+            cell.delegate = self
+            cell.row = indexPath.row
+        
+            cell.playerBeingEdited = players[indexPath.row]
+            cell.playerImageView.tintColor = players[indexPath.row].profileColor
+            cell.playerStepper.value = Double(players[indexPath.row].score)
+           
+            cell.playerNameLabel.text = players[indexPath.row].name
+            cell.playerScoreCounter.text = "\(Int(cell.playerStepper.value))"
+           
             return cell
+            
 
      
         // Configure the cell...
@@ -116,10 +106,10 @@ class PlayersTableViewController: UITableViewController, PlayerPassing, PlayerTa
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            currentGame?.players.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
-           
-
+            players.remove(at: indexPath.row)
+            
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            
         }
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -127,6 +117,18 @@ class PlayersTableViewController: UITableViewController, PlayerPassing, PlayerTa
         print("\(players[indexPath.row].name):  \(players[indexPath.row].score)")
     }
     
+    
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
 
 
@@ -143,14 +145,6 @@ extension Double {
         return String(formatter.string(from: number) ?? "")
         
     }
-    
-    
-    
-}
-
-extension PlayersTableViewController {
-    
-    
     
     
     
