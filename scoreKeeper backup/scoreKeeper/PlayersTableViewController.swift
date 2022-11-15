@@ -32,13 +32,13 @@ class PlayersTableViewController: UITableViewController, PlayerPassing, PlayerTa
     }
     
     func passPlayer(player: Player) {
-        playerxpend(player)
+        players.append(player)
         players.sort()
         tableView.reloadData()
         
     }
     
-    func updateTableView(stepper: Double, row: Int, playerToUpdate: Player) {
+    func updateTableView(stepper: Double, row: Int) {
         players[row].score = Int(stepper)
         
         let withAnimation = (players == players.sorted()) ? false : true

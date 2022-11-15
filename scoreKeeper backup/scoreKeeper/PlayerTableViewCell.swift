@@ -7,7 +7,7 @@
 
 import UIKit
 protocol PlayerTableViewCellDelegate: AnyObject {
-    func updateTableView(stepper: Double, row: Int, playerToUpdate: Player)
+    func updateTableView(stepper: Double, row: Int)
 }
 
 class PlayerTableViewCell: UITableViewCell {
@@ -51,7 +51,7 @@ class PlayerTableViewCell: UITableViewCell {
     @IBAction func stepperTapped(_ sender: Any) {
         guard let playerBeingEdited = playerBeingEdited else { return }
        
-        delegate?.updateTableView(stepper: playerStepper.value, row: self.row!, playerToUpdate: playerBeingEdited)
+        delegate?.updateTableView(stepper: playerStepper.value, row: self.row!)
         
         playerScoreCounter.text = "\(playerBeingEdited.score)"
         

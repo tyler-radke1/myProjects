@@ -26,7 +26,7 @@ class PlayersTableViewController: UITableViewController, PlayerPassing, PlayerTa
         currentGame?.players.sort()
         tableView.reloadData()
         
-        currentGameLabel.text = "\(currentGame?.gameTitle ?? "Game")"
+        self.title = "\(currentGame?.gameTitle ?? "Game")"
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -49,24 +49,25 @@ class PlayersTableViewController: UITableViewController, PlayerPassing, PlayerTa
         currentGame?.players[row].score = Int(stepper)
         
         let withAnimation = (players == players.sorted()) ? false : true
+        
         currentGame?.players.sort()
-        
-        tableView.reloadSections([0], with: (withAnimation) ? .automatic : .none )
-        
+        tableView.reloadData()
+
     }
     
     
-
-    @IBSegueAction func segueToAddPlayer(_ coder: NSCoder) -> AddPlayerViewController? {
+    @IBSegueAction func segueToAddPlayer(_ coder: NSCoder, sender: Any?) -> AddPlayerViewController? {
         let addPlayerViewController = AddPlayerViewController(coder: coder)
-        
+
         if let addPlayerViewController = addPlayerViewController {
             addPlayerViewController.delegate = self
         }
-       
-        
+
+
         return addPlayerViewController
+
     }
+   
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

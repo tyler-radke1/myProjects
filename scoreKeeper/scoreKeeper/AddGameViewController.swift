@@ -31,11 +31,14 @@ class AddGameViewController: UIViewController {
         var gameToAdd = Game(gameTitle: gameTitleTextField.text ?? "New Game", sortBy: sortBySwitch.isOn, players: [])
         
         addGameDelegate?.addNewGame(game: gameToAdd)
-        
-        performSegue(withIdentifier: "fromGameToCreatePlayer", sender: nil)
-        
+        self.navigationController?.popViewController(animated: true)
     }
     
+//    @IBSegueAction func segueToAddPlayers(_ coder: NSCoder) -> AddPlayerViewController? {
+//        let addPlayerViewController = AddPlayerViewController(coder: coder)
+//
+//        addPlayerViewController.
+//    }
     /*
     // MARK: - Navigation
 

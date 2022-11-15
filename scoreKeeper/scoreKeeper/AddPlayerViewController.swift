@@ -14,6 +14,8 @@ protocol PlayerPassing {
 class AddPlayerViewController: UIViewController {
 
     var delegate: PlayerPassing?
+    
+   
     @IBOutlet weak var addNameTextField: UITextField!
     
     @IBOutlet weak var addScoreTextField: UITextField!
@@ -42,7 +44,7 @@ class AddPlayerViewController: UIViewController {
         
         delegate?.passPlayer(player: playerToSend)
         
-        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
         
     }
     
