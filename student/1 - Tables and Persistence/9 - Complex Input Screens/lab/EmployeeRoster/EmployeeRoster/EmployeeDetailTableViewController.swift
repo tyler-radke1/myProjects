@@ -34,11 +34,13 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
         if let employee = employee {
             navigationItem.title = employee.name
             nameTextField.text = employee.name
-            
+            dobDatePicker.date = employee.dateOfBirth
             dobLabel.text = employee.dateOfBirth.formatted(date: .abbreviated, time: .omitted)
             dobLabel.textColor = .label
             employeeTypeLabel.text = employee.employeeType.description
             employeeTypeLabel.textColor = .label
+            
+            employeeType = employee.employeeType
         } else {
             navigationItem.title = "New Employee"
         }
@@ -77,6 +79,7 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
         
         let employee = Employee(name: name, dateOfBirth: dobDatePicker.date, employeeType: employeeType)
         delegate?.employeeDetailTableViewController(self, didSave: employee)
+    
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
@@ -87,9 +90,11 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
         updateSaveButtonState()
     }
     
+  
     @IBAction func changedBirthday(_ sender: UIDatePicker) {
         dobLabel.textColor = .black
-        dobLabel.text = "\(Date().formatted(date: .abbreviated, time: .omitted))"
+        dobLabel.text = "\(dobDatePicker.date.formatted(date: .abbreviated, time: .omitted))"
+        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
