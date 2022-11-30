@@ -35,10 +35,13 @@ struct StoreItem: Codable {
     }
 }
 
-struct SearchRespone: Codable {
+struct SearchResponse: Codable {
     var results: [StoreItem]
 }
 
+enum ErrorTypes: Error, LocalizedError {
+    case youDoneMessedUp
+}
 
 func fetchItems(query: [String: String]) async throws -> [StoreItem] {
     
@@ -52,15 +55,43 @@ func fetchItems(query: [String: String]) async throws -> [StoreItem] {
     
     if let httpResponse = response.1 as? HTTPURLResponse, httpResponse.statusCode == 200 {
         response.0.prettyPrintedJSONString()
+    } else {
+        throw ErrorTypes.youDoneMessedUp
     }
-
+    
+    let decoder = JSONDecoder()
+    
+    let searchResponse = try decoder.decode(SearchResponse.self, from: response.0)
     
     
+    return searchResponse.results
     
     
 }
 
+let query = [
+    "term" : "jazz",
+    "entity" : "album",
+    "limit" : "5"
+]
 
+
+Task {
+    do {
+        let storeItems = try await fetchItems(query: query)
+        storeItems.forEach { item in
+            print("""
+            Name: \(item.artistName)
+            Genre: \(item.primaryGenreName)
+            # of Tracks: \(item.trackCount)
+             
+             
+            """)
+        }
+    } catch {
+        print(error)
+    }
+}
 
 
 
