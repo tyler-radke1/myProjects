@@ -25,13 +25,13 @@ extension Data {
 struct StoreItem: Codable {
     var artistName: String
     var primaryGenreName: String
-    var trackCount: String
+    var trackCount: Int
     
     
     enum CodingKeys: String, CodingKey {
-        case artistName = "artist_name"
-        case primaryGenreName = "primary_genre_name"
-        case trackCount = "track_count"
+        case artistName
+        case primaryGenreName
+        case trackCount
     }
 }
 
@@ -70,24 +70,20 @@ func fetchItems(query: [String: String]) async throws -> [StoreItem] {
 }
 
 let query = [
-    "term" : "jazz",
+    "term" : "Linkin Park",
     "entity" : "album",
     "limit" : "5"
+    
 ]
 
 
 Task {
     do {
         let storeItems = try await fetchItems(query: query)
-        storeItems.forEach { item in
-            print("""
-            Name: \(item.artistName)
-            Genre: \(item.primaryGenreName)
-            # of Tracks: \(item.trackCount)
-             
-             
-            """)
+        for item in storeItems {
+            print(item)
         }
+
     } catch {
         print(error)
     }
