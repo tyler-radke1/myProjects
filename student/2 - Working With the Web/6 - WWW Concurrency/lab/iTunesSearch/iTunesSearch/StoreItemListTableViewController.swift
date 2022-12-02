@@ -7,9 +7,12 @@ class StoreItemListTableViewController: UITableViewController {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var filterSegmentedControl: UISegmentedControl!
     
+    let storeItemController = StoreItemController()
+    
+    
     // add item controller property
     
-    var items = [String]()
+    var items: [StoreItem] = []
     var imageLoadTasks: [IndexPath: Task<Void, Never>] = [:]
     
     let queryOptions = ["movie", "music", "software", "ebook"]
@@ -30,23 +33,45 @@ class StoreItemListTableViewController: UITableViewController {
         if !searchTerm.isEmpty {
             
             // set up query dictionary
-            
+            let queryDict = ["term" : searchTerm, "media" : mediaType, "limit" : "15"]
             // use the item controller to fetch items
+            Task {
+                do {
+                    self.items = try await storeItemController.fetchItems(query: queryDict)
+                    self.tableView.reloadData()
+                    print("Success")
+                } catch {
+                    throw error
+                }
+            }
+            
             // if successful, use the main queue to set self.items and reload the table view
             // otherwise, print an error to the console
         }
     }
     
-    func configure(cell: ItemCell, forItemAt indexPath: IndexPath) {
+    func configure(cell: ItemCell, forItemAt indexPath: IndexPath)  {
         
         let item = items[indexPath.row]
         
         // set cell.name to the item's name
+        cell.name = item.name
+        Task {
+            do {
+                cell.artworkImage = try await UIImage(data: storeItemController.fetchImage(item: item))
+            } catch {
+                throw error
+            }
+            
+        }
+        
+        
+        
         
         // set cell.artist to the item's artist
-        
+        cell.artist = item.artist
         // set cell.artworkImage to nil
-        
+       // cell.artworkImage = nil
         // initialize a network task to fetch the item's artwork keeping track of the task
         // in imageLoadTasks so they can be cancelled if the cell will not be shown after
         // the task completes.
@@ -69,9 +94,14 @@ class StoreItemListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Item", for: indexPath) as! ItemCell
+        
         configure(cell: cell, forItemAt: indexPath)
+        
+        
+        
+       return cell
 
-        return cell
+        
     }
     
     // MARK: - Table view delegate
@@ -94,5 +124,25 @@ extension StoreItemListTableViewController: UISearchBarDelegate {
         fetchMatchingItems()
         searchBar.resignFirstResponder()
     }
+}
+
+
+extension Data {
+    func prettyPrintedJSONString() {
+        guard
+            let jsonObject = try?
+                JSONSerialization.jsonObject(with: self,
+                                             options: []),
+            let jsonData = try?
+                JSONSerialization.data(withJSONObject:
+                                        jsonObject, options: [.prettyPrinted]),
+            let prettyJSONString = String(data: jsonData,
+                                          encoding: .utf8) else {
+            print("Failed to read JSON Object.")
+            return
+        }
+        print(prettyJSONString)
+    }
+    
 }
 

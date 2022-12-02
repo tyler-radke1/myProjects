@@ -11,6 +11,8 @@ class ItemCell: UITableViewCell {
             }
         }
     }
+    @IBOutlet weak var titleLabel: UILabel!
+    
     var artist: String? = nil
     {
         didSet {
