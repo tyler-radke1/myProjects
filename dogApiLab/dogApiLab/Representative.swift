@@ -9,23 +9,24 @@ import Foundation
 import UIKit
 
 struct stupidAPI: Codable {
-    var results: [String : [String: String]]
+    var results:[Representative]
 
     
 }
     struct Representative: Codable {
         var name: String
-        var state: String
+        var party: String
         var district: String
-        var website: String
+        var state: String
+      
         
         enum CodingKeys: String, CodingKey {
-            case name, state, district, website
+            case name, district, party, state
         }
         
         
-        static func getRepData(zipCode: Int) async throws -> [Representative] {
-            let query = ["zip" : "\(zipCode)", "output" : "json"]
+        static func getRepData(zipCode: String) async throws -> [Representative] {
+            let query = ["zip" : zipCode, "output" : "json"]
             
             let searchURL = URL(string: "https://whoismyrepresentative.com/getall_mems.php")!
             
@@ -40,9 +41,8 @@ struct stupidAPI: Codable {
             
             let data = try decoder.decode(stupidAPI.self, from: response.0)
             
-            print(data.results.keys)
-            
-            return data.results.keys as! [Representative]
+
+            return data.results
         }
         
         

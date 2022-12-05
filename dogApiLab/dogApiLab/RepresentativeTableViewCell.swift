@@ -13,7 +13,7 @@ class RepresentativeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var stateLabel: UILabel!
     
-    @IBOutlet weak var websiteLabel: UILabel!
+    @IBOutlet weak var partyLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
