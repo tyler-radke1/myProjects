@@ -10,16 +10,14 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var imageOfDog: UIImageView!
+    
     let dogClass = DogClass()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    
-    
-    
-    @IBAction func newDogButton(_ sender: UIButton) {
+    func getDog() {
         do {
             Task {
                 let dog = try await dogClass.dogRequest()
@@ -28,11 +26,10 @@ class ViewController: UIViewController {
                 if let dogData = dogData {
                     imageOfDog.image = UIImage(data: dogData)
                 }
-            } 
-            
-            
+            }
         }
-        
     }
+    
+ 
     
 }

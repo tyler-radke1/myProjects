@@ -7,31 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F52551C293FAB00009E966A /* NobelPrizeFiles in Sources */ = {isa = PBXBuildFile; fileRef = 9F52551B293FAB00009E966A /* NobelPrizeFiles */; };
 		9F66FDC9293A4ADE00A9C65F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66FDC8293A4ADE00A9C65F /* AppDelegate.swift */; };
 		9F66FDCB293A4ADE00A9C65F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66FDCA293A4ADE00A9C65F /* SceneDelegate.swift */; };
-		9F66FDCD293A4ADE00A9C65F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66FDCC293A4ADE00A9C65F /* ViewController.swift */; };
+		9F66FDCD293A4ADE00A9C65F /* DogFiles in Sources */ = {isa = PBXBuildFile; fileRef = 9F66FDCC293A4ADE00A9C65F /* DogFiles */; };
 		9F66FDD0293A4ADE00A9C65F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F66FDCE293A4ADE00A9C65F /* Main.storyboard */; };
 		9F66FDD2293A4ADE00A9C65F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F66FDD1293A4ADE00A9C65F /* Assets.xcassets */; };
 		9F66FDD5293A4ADE00A9C65F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F66FDD3293A4ADE00A9C65F /* LaunchScreen.storyboard */; };
-		9F66FDDD293A4E8100A9C65F /* GoodBoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66FDDC293A4E8100A9C65F /* GoodBoi.swift */; };
-		9F66FDE1293A5C5900A9C65F /* RepresentativeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66FDE0293A5C5900A9C65F /* RepresentativeTableViewCell.swift */; };
-		9F66FDE3293A5C7600A9C65F /* RepresentativeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66FDE2293A5C7600A9C65F /* RepresentativeTableViewController.swift */; };
-		9F66FDE5293A5F1900A9C65F /* Representative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66FDE4293A5F1900A9C65F /* Representative.swift */; };
+		9F7453C42941002F001D1016 /* GoodBoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7453C32941002F001D1016 /* GoodBoi.swift */; };
+		9F7453C629410032001D1016 /* NobelPrize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7453C529410032001D1016 /* NobelPrize.swift */; };
+		9F7453C829410033001D1016 /* NobelPrizeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7453C729410033001D1016 /* NobelPrizeTableViewController.swift */; };
+		9F7453CA29410035001D1016 /* NobelPrizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7453C929410035001D1016 /* NobelPrizeCell.swift */; };
+		9F7453CC29410038001D1016 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7453CB29410038001D1016 /* ViewController.swift */; };
+		9F7453CD2941003A001D1016 /* Representative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F52551E293FAC9D009E966A /* Representative.swift */; };
+		9F7453CE2941003B001D1016 /* RepresentativeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F52551F293FAC9D009E966A /* RepresentativeTableViewCell.swift */; };
+		9F7453CF2941003D001D1016 /* RepresentativeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F525520293FAC9D009E966A /* RepresentativeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F52551B293FAB00009E966A /* NobelPrizeFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; name = NobelPrizeFiles; path = dogApiLab/NobelPrizeFiles; sourceTree = SOURCE_ROOT; };
+		9F52551E293FAC9D009E966A /* Representative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Representative.swift; path = /Users/tylerradke/Desktop/myProjects/dogApiLab/dogApiLab/RepresentativeFiles/Representative.swift; sourceTree = "<absolute>"; };
+		9F52551F293FAC9D009E966A /* RepresentativeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepresentativeTableViewCell.swift; path = /Users/tylerradke/Desktop/myProjects/dogApiLab/dogApiLab/RepresentativeFiles/RepresentativeTableViewCell.swift; sourceTree = "<absolute>"; };
+		9F525520293FAC9D009E966A /* RepresentativeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepresentativeTableViewController.swift; path = /Users/tylerradke/Desktop/myProjects/dogApiLab/dogApiLab/RepresentativeFiles/RepresentativeTableViewController.swift; sourceTree = "<absolute>"; };
 		9F66FDC5293A4ADE00A9C65F /* dogApiLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dogApiLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F66FDC8293A4ADE00A9C65F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F66FDCA293A4ADE00A9C65F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F66FDCC293A4ADE00A9C65F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F66FDCC293A4ADE00A9C65F /* DogFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DogFiles; path = dogApiLab/DogFiles; sourceTree = SOURCE_ROOT; };
 		9F66FDCF293A4ADE00A9C65F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F66FDD1293A4ADE00A9C65F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F66FDD4293A4ADE00A9C65F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F66FDD6293A4ADE00A9C65F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F66FDDC293A4E8100A9C65F /* GoodBoi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodBoi.swift; sourceTree = "<group>"; };
-		9F66FDE0293A5C5900A9C65F /* RepresentativeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentativeTableViewCell.swift; sourceTree = "<group>"; };
-		9F66FDE2293A5C7600A9C65F /* RepresentativeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentativeTableViewController.swift; sourceTree = "<group>"; };
-		9F66FDE4293A5F1900A9C65F /* Representative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Representative.swift; sourceTree = "<group>"; };
+		9F7453C32941002F001D1016 /* GoodBoi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodBoi.swift; sourceTree = "<group>"; };
+		9F7453C529410032001D1016 /* NobelPrize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobelPrize.swift; sourceTree = "<group>"; };
+		9F7453C729410033001D1016 /* NobelPrizeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobelPrizeTableViewController.swift; sourceTree = "<group>"; };
+		9F7453C929410035001D1016 /* NobelPrizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobelPrizeCell.swift; sourceTree = "<group>"; };
+		9F7453CB29410038001D1016 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F52551D293FAC9D009E966A /* RepresentativeFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepresentativeFiles;
+			sourceTree = "<group>";
+		};
 		9F66FDBC293A4ADD00A9C65F = {
 			isa = PBXGroup;
 			children = (
@@ -64,14 +81,20 @@
 		9F66FDC7293A4ADE00A9C65F /* dogApiLab */ = {
 			isa = PBXGroup;
 			children = (
+				9F7453C32941002F001D1016 /* GoodBoi.swift */,
 				9F66FDC8293A4ADE00A9C65F /* AppDelegate.swift */,
 				9F66FDCA293A4ADE00A9C65F /* SceneDelegate.swift */,
-				9F66FDCC293A4ADE00A9C65F /* ViewController.swift */,
-				9F66FDE0293A5C5900A9C65F /* RepresentativeTableViewCell.swift */,
-				9F66FDDC293A4E8100A9C65F /* GoodBoi.swift */,
+				9F7453C529410032001D1016 /* NobelPrize.swift */,
+				9F7453C929410035001D1016 /* NobelPrizeCell.swift */,
+				9F525520293FAC9D009E966A /* RepresentativeTableViewController.swift */,
+				9F7453CB29410038001D1016 /* ViewController.swift */,
+				9F52551E293FAC9D009E966A /* Representative.swift */,
+				9F52551F293FAC9D009E966A /* RepresentativeTableViewCell.swift */,
+				9F7453C729410033001D1016 /* NobelPrizeTableViewController.swift */,
+				9F52551B293FAB00009E966A /* NobelPrizeFiles */,
+				9F66FDCC293A4ADE00A9C65F /* DogFiles */,
 				9F66FDCE293A4ADE00A9C65F /* Main.storyboard */,
-				9F66FDE4293A5F1900A9C65F /* Representative.swift */,
-				9F66FDE2293A5C7600A9C65F /* RepresentativeTableViewController.swift */,
+				9F52551D293FAC9D009E966A /* RepresentativeFiles */,
 				9F66FDD1293A4ADE00A9C65F /* Assets.xcassets */,
 				9F66FDD3293A4ADE00A9C65F /* LaunchScreen.storyboard */,
 				9F66FDD6293A4ADE00A9C65F /* Info.plist */,
@@ -150,13 +173,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F66FDCD293A4ADE00A9C65F /* ViewController.swift in Sources */,
+				9F7453C829410033001D1016 /* NobelPrizeTableViewController.swift in Sources */,
+				9F7453CA29410035001D1016 /* NobelPrizeCell.swift in Sources */,
+				9F7453CF2941003D001D1016 /* RepresentativeTableViewController.swift in Sources */,
+				9F66FDCD293A4ADE00A9C65F /* DogFiles in Sources */,
+				9F7453CC29410038001D1016 /* ViewController.swift in Sources */,
+				9F7453C629410032001D1016 /* NobelPrize.swift in Sources */,
 				9F66FDC9293A4ADE00A9C65F /* AppDelegate.swift in Sources */,
-				9F66FDE3293A5C7600A9C65F /* RepresentativeTableViewController.swift in Sources */,
-				9F66FDE5293A5F1900A9C65F /* Representative.swift in Sources */,
-				9F66FDE1293A5C5900A9C65F /* RepresentativeTableViewCell.swift in Sources */,
+				9F7453C42941002F001D1016 /* GoodBoi.swift in Sources */,
+				9F52551C293FAB00009E966A /* NobelPrizeFiles in Sources */,
+				9F7453CD2941003A001D1016 /* Representative.swift in Sources */,
+				9F7453CE2941003B001D1016 /* RepresentativeTableViewCell.swift in Sources */,
 				9F66FDCB293A4ADE00A9C65F /* SceneDelegate.swift in Sources */,
-				9F66FDDD293A4E8100A9C65F /* GoodBoi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
