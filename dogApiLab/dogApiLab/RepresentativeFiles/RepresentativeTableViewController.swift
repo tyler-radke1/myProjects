@@ -19,7 +19,7 @@ class RepresentativeTableViewController: UITableViewController, UISearchBarDeleg
     let failedRep = Representative(name: "Enter a valid area code", party: "n/a", district: "", state: "n/a")
 
     
-    var reps: [Representative] 
+    var reps: [Representative] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

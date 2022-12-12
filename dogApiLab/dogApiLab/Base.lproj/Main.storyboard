@@ -145,7 +145,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Reps" id="szU-s0-rNx"/>
                     <connections>
-                        <outlet property="searchBar" destination="HVa-CB-ocm" id="NLk-eT-Mq7"/>
+                        <outlet property="searchBar" destination="HVa-CB-ocm" id="ds2-dX-n5t"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FdS-cM-pMv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -9,12 +9,13 @@ import UIKit
 
 class OrderTableViewController: UITableViewController {
 
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      //  tableView.reloadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        NotificationCenter.default.addObserver(tableView!, selector: #selector(UITableView.reloadData), name: MenuController.orderUpdatedNotification, object: nil)
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -23,23 +24,35 @@ class OrderTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return MenuController.shared.order.menuItems.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Order", for: indexPath)
+        
+        configure(cell, forItemAt: indexPath)
+    
         // Configure the cell...
 
         return cell
     }
-    */
+    
+    func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
+        let menuItem = MenuController.shared.order.menuItems[indexPath.row]
+        
+        var content = cell.defaultContentConfiguration()
+        
+        content.text = menuItem.name
+        content.secondaryText = menuItem.price.formatted(.currency(code: "usd"))
+        cell.contentConfiguration = content
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.
