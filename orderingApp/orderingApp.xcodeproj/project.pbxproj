@@ -16,7 +16,9 @@
 		9F525514293FA1B1009E966A /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F525513293FA1B1009E966A /* CategoryTableViewController.swift */; };
 		9F525516293FA1C2009E966A /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F525515293FA1C2009E966A /* MenuTableViewController.swift */; };
 		9F525518293FA23F009E966A /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F525517293FA23F009E966A /* MenuItem.swift */; };
+		9F5B88A42952233600E2EE0B /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B88A32952233600E2EE0B /* MenuItemCell.swift */; };
 		9F8514B429424A2C00BA4D06 /* MenuItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8514B329424A2C00BA4D06 /* MenuItemDetail.swift */; };
+		9F9978FF295212350047D5B8 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9978FE295212350047D5B8 /* OrderConfirmationViewController.swift */; };
 		9FD54AE92940E418005DA062 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD54AE82940E418005DA062 /* ResponseModels.swift */; };
 		9FD54AEB2940E454005DA062 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD54AEA2940E454005DA062 /* Order.swift */; };
 		9FD54AED2940E524005DA062 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD54AEC2940E524005DA062 /* MenuController.swift */; };
@@ -34,7 +36,9 @@
 		9F525513293FA1B1009E966A /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		9F525515293FA1C2009E966A /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		9F525517293FA23F009E966A /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		9F5B88A32952233600E2EE0B /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuItemCell.swift; path = Cell/MenuItemCell.swift; sourceTree = "<group>"; };
 		9F8514B329424A2C00BA4D06 /* MenuItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetail.swift; sourceTree = "<group>"; };
+		9F9978FE295212350047D5B8 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		9FD54AE82940E418005DA062 /* ResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModels.swift; sourceTree = "<group>"; };
 		9FD54AEA2940E454005DA062 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		9FD54AEC2940E524005DA062 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 				9F5254FD293FA0C9009E966A /* AppDelegate.swift */,
 				9F5254FF293FA0C9009E966A /* SceneDelegate.swift */,
 				9F525503293FA0C9009E966A /* Main.storyboard */,
+				9F5B88A32952233600E2EE0B /* MenuItemCell.swift */,
 				9F8514B629424A7B00BA4D06 /* Struct Files */,
 				9F8514B529424A3800BA4D06 /* View Controllers */,
 				9FD54AEC2940E524005DA062 /* MenuController.swift */,
@@ -86,6 +91,7 @@
 		9F8514B529424A3800BA4D06 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9F9978FE295212350047D5B8 /* OrderConfirmationViewController.swift */,
 				9F8514B329424A2C00BA4D06 /* MenuItemDetail.swift */,
 				9F525511293FA1AB009E966A /* OrderTableViewController.swift */,
 				9F525513293FA1B1009E966A /* CategoryTableViewController.swift */,
@@ -184,6 +190,8 @@
 				9F525518293FA23F009E966A /* MenuItem.swift in Sources */,
 				9FD54AE92940E418005DA062 /* ResponseModels.swift in Sources */,
 				9F5254FE293FA0C9009E966A /* AppDelegate.swift in Sources */,
+				9F5B88A42952233600E2EE0B /* MenuItemCell.swift in Sources */,
+				9F9978FF295212350047D5B8 /* OrderConfirmationViewController.swift in Sources */,
 				9F525500293FA0C9009E966A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

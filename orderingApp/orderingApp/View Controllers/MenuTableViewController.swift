@@ -83,21 +83,35 @@ class MenuTableViewController: UITableViewController {
     }
 
     func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
-        let menuItem = menuItems[indexPath.row]
+       
         
-        var content = cell.defaultContentConfiguration()
-        content.text = menuItem.name
-        content.secondaryText = menuItem.price.formatted(.currency(code: "usd"))
-        cell.contentConfiguration = content
         
+        
+//        var content = cell.defaultContentConfiguration()
+//        content.text = menuItem.name
+//        content.secondaryText = menuItem.price.formatted(.currency(code: "usd"))
+//        cell.contentConfiguration = content
+//
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuItem", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuItem", for: indexPath) as! MenuItemCell
+        let menuItem = menuItems[indexPath.row]
+        cell.itemNameLabel.text = menuItem.name
+        cell.itemPriceLabel.text = menuItem.price.formatted(.currency(code: "usd"))
+        Task {
+            cell.itemImageView?.image = try await UIImage(data: MenuController.shared.fetchImage(menuItem: menuItem))
+        }
+       
+       
         
         configure(cell, forItemAt: indexPath)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
     }
 
 }

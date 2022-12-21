@@ -14,6 +14,7 @@ class MenuController {
             NotificationCenter.default.post(name: MenuController.orderUpdatedNotification, object: nil)
         }
     }
+    
     static let shared = MenuController()
     static let orderUpdatedNotification = Notification.Name("MenuController.orderUpdated")
     
@@ -63,7 +64,7 @@ class MenuController {
     typealias MinutesToPrepare = Int
     
     func submitOrder(forMenuIDs menuIDs: [Int]) async throws -> MinutesToPrepare {
-        let orderURL = baseURL.appendingPathExtension("order")
+        let orderURL = baseURL.appendingPathComponent("order")
         
         var request = URLRequest(url: orderURL)
         
@@ -75,7 +76,9 @@ class MenuController {
         
         let jsonEncoder = JSONEncoder()
         
-        let jsonData = try? jsonEncoder.encode(menuIdsDict)
+        let jsonData = try jsonEncoder.encode(menuIdsDict)
+        print(String(data: jsonData, encoding: .utf8))
+        request.httpBody = jsonData
         
         let orderResponse = try await URLSession.shared.data(for: request)
       
@@ -88,6 +91,15 @@ class MenuController {
         
         return response.prepTime
         
+    }
+    
+    func fetchImage(menuItem: MenuItem) async throws -> Data {
+        do {
+            let data = try await URLSession.shared.data(from: menuItem.imageURL)
+            return data.0
+        } catch {
+            throw error
+        }
     }
     
     enum MenuControllerError: Error, LocalizedError {

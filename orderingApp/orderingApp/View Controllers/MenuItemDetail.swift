@@ -8,7 +8,7 @@
 import UIKit
 
 class MenuItemDetail: UIViewController {
-
+    
     var menuItem: MenuItem
     
     @IBOutlet weak var imageView: UIImageView!
@@ -18,7 +18,7 @@ class MenuItemDetail: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var orderButton: UIButton!
-    
+    var minutesToPrepareOrder = 0
     init?(coder: NSCoder, menuItem: MenuItem) {
         self.menuItem = menuItem
         super.init(coder: coder)
@@ -37,9 +37,25 @@ class MenuItemDetail: UIViewController {
         detailTextView.text = menuItem.detailText
         nameLabel.text = menuItem.name
         priceLabel.text = menuItem.price.formatted(.currency(code: "usd"))
+        
+        Task {
+            imageView.image = try await UIImage(data: MenuController.shared.fetchImage(menuItem: menuItem))
+        }
+     
+        
     }
     
-
+   
+    
+   
+    
+    @IBAction func unwindToOrderList(segue: UIStoryboardSegue) {
+        if segue.identifier == "dismissConfirmation" {
+            MenuController.shared.order.menuItems.removeAll()
+        }
+    }
+    
+  
     @IBAction func orderButtonTapped(_ sender: UIButton) {
         UIView.animate(withDuration: 0.5) {
             self.orderButton.transform = CGAffineTransform(scaleX: 2, y: 2)
@@ -51,6 +67,6 @@ class MenuItemDetail: UIViewController {
         print(MenuController.shared.order.menuItems)
         
     }
-   
-
+    
+    
 }
