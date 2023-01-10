@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F3AB6DD296DC38800E970F6 /* Flags_Game__Swift_UI_Version_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AB6DC296DC38800E970F6 /* Flags_Game__Swift_UI_Version_App.swift */; };
+		9F3AB6DF296DC38800E970F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AB6DE296DC38800E970F6 /* ContentView.swift */; };
+		9F3AB6E1296DC38900E970F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F3AB6E0296DC38900E970F6 /* Assets.xcassets */; };
+		9F3AB6E4296DC38900E970F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F3AB6E3296DC38900E970F6 /* Preview Assets.xcassets */; };
+		9F3AB6EE296DC38900E970F6 /* Flags_Game__Swift_UI_Version_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AB6ED296DC38900E970F6 /* Flags_Game__Swift_UI_Version_Tests.swift */; };
+		9F3AB6F8296DC38900E970F6 /* Flags_Game__Swift_UI_Version_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AB6F7296DC38900E970F6 /* Flags_Game__Swift_UI_Version_UITests.swift */; };
+		9F3AB6FA296DC38A00E970F6 /* Flags_Game__Swift_UI_Version_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AB6F9296DC38A00E970F6 /* Flags_Game__Swift_UI_Version_UITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F3AB6EA296DC38900E970F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F3AB6D1296DC38800E970F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F3AB6D8296DC38800E970F6;
+			remoteInfo = "Flags Game (Swift UI Version)";
+		};
+		9F3AB6F4296DC38900E970F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F3AB6D1296DC38800E970F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F3AB6D8296DC38800E970F6;
+			remoteInfo = "Flags Game (Swift UI Version)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F3AB6D9296DC38800E970F6 /* Flags Game (Swift UI Version).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flags Game (Swift UI Version).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F3AB6DC296DC38800E970F6 /* Flags_Game__Swift_UI_Version_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flags_Game__Swift_UI_Version_App.swift; sourceTree = "<group>"; };
+		9F3AB6DE296DC38800E970F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9F3AB6E0296DC38900E970F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F3AB6E3296DC38900E970F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9F3AB6E9296DC38900E970F6 /* Flags Game (Swift UI Version)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flags Game (Swift UI Version)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F3AB6ED296DC38900E970F6 /* Flags_Game__Swift_UI_Version_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flags_Game__Swift_UI_Version_Tests.swift; sourceTree = "<group>"; };
+		9F3AB6F3296DC38900E970F6 /* Flags Game (Swift UI Version)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flags Game (Swift UI Version)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F3AB6F7296DC38900E970F6 /* Flags_Game__Swift_UI_Version_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flags_Game__Swift_UI_Version_UITests.swift; sourceTree = "<group>"; };
+		9F3AB6F9296DC38A00E970F6 /* Flags_Game__Swift_UI_Version_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flags_Game__Swift_UI_Version_UITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F3AB6D6296DC38800E970F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F3AB6E6296DC38900E970F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F3AB6F0296DC38900E970F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F3AB6D0296DC38800E970F6 = {
+			isa = PBXGroup;
+			children = (
+				9F3AB6DB296DC38800E970F6 /* Flags Game (Swift UI Version) */,
+				9F3AB6EC296DC38900E970F6 /* Flags Game (Swift UI Version)Tests */,
+				9F3AB6F6296DC38900E970F6 /* Flags Game (Swift UI Version)UITests */,
+				9F3AB6DA296DC38800E970F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F3AB6DA296DC38800E970F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F3AB6D9296DC38800E970F6 /* Flags Game (Swift UI Version).app */,
+				9F3AB6E9296DC38900E970F6 /* Flags Game (Swift UI Version)Tests.xctest */,
+				9F3AB6F3296DC38900E970F6 /* Flags Game (Swift UI Version)UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F3AB6DB296DC38800E970F6 /* Flags Game (Swift UI Version) */ = {
+			isa = PBXGroup;
+			children = (
+				9F3AB6DC296DC38800E970F6 /* Flags_Game__Swift_UI_Version_App.swift */,
+				9F3AB6DE296DC38800E970F6 /* ContentView.swift */,
+				9F3AB6E0296DC38900E970F6 /* Assets.xcassets */,
+				9F3AB6E2296DC38900E970F6 /* Preview Content */,
+			);
+			path = "Flags Game (Swift UI Version)";
+			sourceTree = "<group>";
+		};
+		9F3AB6E2296DC38900E970F6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9F3AB6E3296DC38900E970F6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9F3AB6EC296DC38900E970F6 /* Flags Game (Swift UI Version)Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9F3AB6ED296DC38900E970F6 /* Flags_Game__Swift_UI_Version_Tests.swift */,
+			);
+			path = "Flags Game (Swift UI Version)Tests";
+			sourceTree = "<group>";
+		};
+		9F3AB6F6296DC38900E970F6 /* Flags Game (Swift UI Version)UITests */ = {
+			isa = PBXGroup;
+			children = (
+				9F3AB6F7296DC38900E970F6 /* Flags_Game__Swift_UI_Version_UITests.swift */,
+				9F3AB6F9296DC38A00E970F6 /* Flags_Game__Swift_UI_Version_UITestsLaunchTests.swift */,
+			);
+			path = "Flags Game (Swift UI Version)UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F3AB6D8296DC38800E970F6 /* Flags Game (Swift UI Version) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F3AB6FD296DC38A00E970F6 /* Build configuration list for PBXNativeTarget "Flags Game (Swift UI Version)" */;
+			buildPhases = (
+				9F3AB6D5296DC38800E970F6 /* Sources */,
+				9F3AB6D6296DC38800E970F6 /* Frameworks */,
+				9F3AB6D7296DC38800E970F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flags Game (Swift UI Version)";
+			productName = "Flags Game (Swift UI Version)";
+			productReference = 9F3AB6D9296DC38800E970F6 /* Flags Game (Swift UI Version).app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F3AB6E8296DC38900E970F6 /* Flags Game (Swift UI Version)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F3AB700296DC38A00E970F6 /* Build configuration list for PBXNativeTarget "Flags Game (Swift UI Version)Tests" */;
+			buildPhases = (
+				9F3AB6E5296DC38900E970F6 /* Sources */,
+				9F3AB6E6296DC38900E970F6 /* Frameworks */,
+				9F3AB6E7296DC38900E970F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F3AB6EB296DC38900E970F6 /* PBXTargetDependency */,
+			);
+			name = "Flags Game (Swift UI Version)Tests";
+			productName = "Flags Game (Swift UI Version)Tests";
+			productReference = 9F3AB6E9296DC38900E970F6 /* Flags Game (Swift UI Version)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F3AB6F2296DC38900E970F6 /* Flags Game (Swift UI Version)UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F3AB703296DC38A00E970F6 /* Build configuration list for PBXNativeTarget "Flags Game (Swift UI Version)UITests" */;
+			buildPhases = (
+				9F3AB6EF296DC38900E970F6 /* Sources */,
+				9F3AB6F0296DC38900E970F6 /* Frameworks */,
+				9F3AB6F1296DC38900E970F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F3AB6F5296DC38900E970F6 /* PBXTargetDependency */,
+			);
+			name = "Flags Game (Swift UI Version)UITests";
+			productName = "Flags Game (Swift UI Version)UITests";
+			productReference = 9F3AB6F3296DC38900E970F6 /* Flags Game (Swift UI Version)UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F3AB6D1296DC38800E970F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					9F3AB6D8296DC38800E970F6 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					9F3AB6E8296DC38900E970F6 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 9F3AB6D8296DC38800E970F6;
+					};
+					9F3AB6F2296DC38900E970F6 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 9F3AB6D8296DC38800E970F6;
+					};
+				};
+			};
+			buildConfigurationList = 9F3AB6D4296DC38800E970F6 /* Build configuration list for PBXProject "Flags Game (Swift UI Version)" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F3AB6D0296DC38800E970F6;
+			productRefGroup = 9F3AB6DA296DC38800E970F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F3AB6D8296DC38800E970F6 /* Flags Game (Swift UI Version) */,
+				9F3AB6E8296DC38900E970F6 /* Flags Game (Swift UI Version)Tests */,
+				9F3AB6F2296DC38900E970F6 /* Flags Game (Swift UI Version)UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F3AB6D7296DC38800E970F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F3AB6E4296DC38900E970F6 /* Preview Assets.xcassets in Resources */,
+				9F3AB6E1296DC38900E970F6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F3AB6E7296DC38900E970F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F3AB6F1296DC38900E970F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F3AB6D5296DC38800E970F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F3AB6DF296DC38800E970F6 /* ContentView.swift in Sources */,
+				9F3AB6DD296DC38800E970F6 /* Flags_Game__Swift_UI_Version_App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F3AB6E5296DC38900E970F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F3AB6EE296DC38900E970F6 /* Flags_Game__Swift_UI_Version_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F3AB6EF296DC38900E970F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F3AB6F8296DC38900E970F6 /* Flags_Game__Swift_UI_Version_UITests.swift in Sources */,
+				9F3AB6FA296DC38A00E970F6 /* Flags_Game__Swift_UI_Version_UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F3AB6EB296DC38900E970F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F3AB6D8296DC38800E970F6 /* Flags Game (Swift UI Version) */;
+			targetProxy = 9F3AB6EA296DC38900E970F6 /* PBXContainerItemProxy */;
+		};
+		9F3AB6F5296DC38900E970F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F3AB6D8296DC38800E970F6 /* Flags Game (Swift UI Version) */;
+			targetProxy = 9F3AB6F4296DC38900E970F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9F3AB6FB296DC38A00E970F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F3AB6FC296DC38A00E970F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F3AB6FE296DC38A00E970F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Flags Game (Swift UI Version)/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.Flags-Game--Swift-UI-Version-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F3AB6FF296DC38A00E970F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Flags Game (Swift UI Version)/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.Flags-Game--Swift-UI-Version-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9F3AB701296DC38A00E970F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.Flags-Game--Swift-UI-Version-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flags Game (Swift UI Version).app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Flags Game (Swift UI Version)";
+			};
+			name = Debug;
+		};
+		9F3AB702296DC38A00E970F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.Flags-Game--Swift-UI-Version-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flags Game (Swift UI Version).app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Flags Game (Swift UI Version)";
+			};
+			name = Release;
+		};
+		9F3AB704296DC38A00E970F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.Flags-Game--Swift-UI-Version-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Flags Game (Swift UI Version)";
+			};
+			name = Debug;
+		};
+		9F3AB705296DC38A00E970F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "self.Flags-Game--Swift-UI-Version-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Flags Game (Swift UI Version)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F3AB6D4296DC38800E970F6 /* Build configuration list for PBXProject "Flags Game (Swift UI Version)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F3AB6FB296DC38A00E970F6 /* Debug */,
+				9F3AB6FC296DC38A00E970F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F3AB6FD296DC38A00E970F6 /* Build configuration list for PBXNativeTarget "Flags Game (Swift UI Version)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F3AB6FE296DC38A00E970F6 /* Debug */,
+				9F3AB6FF296DC38A00E970F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F3AB700296DC38A00E970F6 /* Build configuration list for PBXNativeTarget "Flags Game (Swift UI Version)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F3AB701296DC38A00E970F6 /* Debug */,
+				9F3AB702296DC38A00E970F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F3AB703296DC38A00E970F6 /* Build configuration list for PBXNativeTarget "Flags Game (Swift UI Version)UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F3AB704296DC38A00E970F6 /* Debug */,
+				9F3AB705296DC38A00E970F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F3AB6D1296DC38800E970F6 /* Project object */;
+}
