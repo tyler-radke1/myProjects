@@ -11,9 +11,6 @@
 		9F3AB6DF296DC38800E970F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AB6DE296DC38800E970F6 /* ContentView.swift */; };
 		9F3AB6E1296DC38900E970F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F3AB6E0296DC38900E970F6 /* Assets.xcassets */; };
 		9F3AB6E4296DC38900E970F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F3AB6E3296DC38900E970F6 /* Preview Assets.xcassets */; };
-		9F3AB6EE296DC38900E970F6 /* Flags_Game__Swift_UI_Version_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AB6ED296DC38900E970F6 /* Flags_Game__Swift_UI_Version_Tests.swift */; };
-		9F3AB6F8296DC38900E970F6 /* Flags_Game__Swift_UI_Version_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AB6F7296DC38900E970F6 /* Flags_Game__Swift_UI_Version_UITests.swift */; };
-		9F3AB6FA296DC38A00E970F6 /* Flags_Game__Swift_UI_Version_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AB6F9296DC38A00E970F6 /* Flags_Game__Swift_UI_Version_UITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +37,7 @@
 		9F3AB6E0296DC38900E970F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F3AB6E3296DC38900E970F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F3AB6E9296DC38900E970F6 /* Flags Game (Swift UI Version)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flags Game (Swift UI Version)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F3AB6ED296DC38900E970F6 /* Flags_Game__Swift_UI_Version_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flags_Game__Swift_UI_Version_Tests.swift; sourceTree = "<group>"; };
 		9F3AB6F3296DC38900E970F6 /* Flags Game (Swift UI Version)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flags Game (Swift UI Version)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F3AB6F7296DC38900E970F6 /* Flags_Game__Swift_UI_Version_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flags_Game__Swift_UI_Version_UITests.swift; sourceTree = "<group>"; };
-		9F3AB6F9296DC38A00E970F6 /* Flags_Game__Swift_UI_Version_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flags_Game__Swift_UI_Version_UITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				9F3AB6DB296DC38800E970F6 /* Flags Game (Swift UI Version) */,
-				9F3AB6EC296DC38900E970F6 /* Flags Game (Swift UI Version)Tests */,
-				9F3AB6F6296DC38900E970F6 /* Flags Game (Swift UI Version)UITests */,
 				9F3AB6DA296DC38800E970F6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,23 +100,6 @@
 				9F3AB6E3296DC38900E970F6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		9F3AB6EC296DC38900E970F6 /* Flags Game (Swift UI Version)Tests */ = {
-			isa = PBXGroup;
-			children = (
-				9F3AB6ED296DC38900E970F6 /* Flags_Game__Swift_UI_Version_Tests.swift */,
-			);
-			path = "Flags Game (Swift UI Version)Tests";
-			sourceTree = "<group>";
-		};
-		9F3AB6F6296DC38900E970F6 /* Flags Game (Swift UI Version)UITests */ = {
-			isa = PBXGroup;
-			children = (
-				9F3AB6F7296DC38900E970F6 /* Flags_Game__Swift_UI_Version_UITests.swift */,
-				9F3AB6F9296DC38A00E970F6 /* Flags_Game__Swift_UI_Version_UITestsLaunchTests.swift */,
-			);
-			path = "Flags Game (Swift UI Version)UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +241,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F3AB6EE296DC38900E970F6 /* Flags_Game__Swift_UI_Version_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F3AB6F8296DC38900E970F6 /* Flags_Game__Swift_UI_Version_UITests.swift in Sources */,
-				9F3AB6FA296DC38A00E970F6 /* Flags_Game__Swift_UI_Version_UITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,14 +8,76 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingScore = false
+    @State private var scoreTitle = ""
+    @State private var score = 0
+    @State private var notScore = 0
+    
+    @State var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
+    @State var correctAnswer = Int.random(in: 0...2)
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        ZStack {
+            RadialGradient(stops: [
+                .init(color: Color(red: 0.1, green: 0.2, blue: 0.45), location: 0.3),
+                .init(color: Color(red: 0.76, green: 0.15, blue: 0.26), location: 0.3),
+            ], center: .top, startRadius: 200, endRadius: 400)
+                .ignoresSafeArea()
+            
+            
+            VStack(spacing: 30) {
+                Text("Guessed Correctly: \(score) : Guessed incorrectly : \(notScore)")
+                    
+                Text("Choose The correct flag for")
+                    .font(.title)
+                Text("\(countries[correctAnswer])")
+                    .font(.subheadline)
+                
+                VStack {
+                    ForEach(0..<3) { number in
+                        Button {
+                            score += (number == correctAnswer) ? 1 : 0
+                            notScore += (number != correctAnswer) ? 1 : 0
+                            flagTapped(number)
+                           
+                            
+                        } label: {
+                            Image(countries[number])
+                                .renderingMode(.original)
+                        }
+                        .border(.white, width: 1)
+                        .shadow(radius: 5)
+                        
+                        .clipShape(Capsule())
+                    }
+                }
+                .background(.regularMaterial)
+                
+                
+            }
+            
+            .foregroundColor(.white)
+         
         }
-        .padding()
+        
+        .alert(scoreTitle, isPresented: $showingScore) {
+            Button("Continue", action: resetFlags)
+        } message: {
+           // Text("Your score is \(score)")
+        }
+   
+    }
+    
+    func flagTapped(_ number: Int) {
+        scoreTitle = (number == correctAnswer) ? "Correct!" : "Wrong."
+        showingScore = true
+        
+    }
+    
+    func resetFlags() {
+        countries.shuffle()
+        correctAnswer = Int.random(in: 0...2)
+        
     }
 }
 
