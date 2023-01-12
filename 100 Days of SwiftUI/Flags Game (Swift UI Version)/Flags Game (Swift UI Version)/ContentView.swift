@@ -25,11 +25,12 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             
-            VStack(spacing: 30) {
+            VStack(spacing: 15) {
                 Text("Guessed Correctly: \(score) : Guessed incorrectly : \(notScore)")
                     
                 Text("Choose The correct flag for")
                     .font(.title)
+                    .foregroundColor(.secondary)
                 Text("\(countries[correctAnswer])")
                     .font(.subheadline)
                 
@@ -51,11 +52,13 @@ struct ContentView: View {
                         .clipShape(Capsule())
                     }
                 }
-                .background(.regularMaterial)
+               
                 
                 
             }
-            
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 20)
+            .background(.regularMaterial)
             .foregroundColor(.white)
          
         }
