@@ -33,7 +33,7 @@ struct ContentView: View {
         case "Scissors":
             return (computer == "Paper") ? true : false
         default:
-            return true
+            return Bool.random()
         }
     }
     
@@ -43,7 +43,7 @@ struct ContentView: View {
     var body: some View {
         
         
-        VStack(spacing: 50) {
+        ZStack {
             Text("Your score is \(score)")
             Text("The computer selected \(computerChoice ?? "" )")
             Text(promptString)
