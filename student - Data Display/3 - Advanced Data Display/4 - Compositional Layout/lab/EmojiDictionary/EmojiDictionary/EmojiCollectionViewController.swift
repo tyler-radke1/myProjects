@@ -25,6 +25,14 @@ class EmojiCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
+        
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(70)), subitem: item, count: 1)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        
+        collectionView.collectionViewLayout = UICollectionViewCompositionalLayout(section: section)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +85,16 @@ class EmojiCollectionViewController: UICollectionViewController {
         guard segue.identifier == "saveUnwind",
             let sourceViewController = segue.source as? AddEditEmojiTableViewController,
             let emoji = sourceViewController.emoji else { return }
+        
+        
+        if let path = collectionView.indexPathsForSelectedItems?.first {
+            emojis[path.row] = emoji
+            collectionView.reloadItems(at: [path])
+        } else {
+            let newIndexPath = IndexPath(row: emojis.count, section: 0)
+            emojis.append(emoji)
+            collectionView.insertItems(at: [newIndexPath])
+        }
     }
 
     // MARK: - UICollectionViewDelegate
@@ -93,6 +111,11 @@ class EmojiCollectionViewController: UICollectionViewController {
         return config
     }
 
+    
+    
+    
     func deleteEmoji(at indexPath: IndexPath) {
+        emojis.remove(at: indexPath.row)
+        collectionView.deleteItems(at: [indexPath])
     }
 }
