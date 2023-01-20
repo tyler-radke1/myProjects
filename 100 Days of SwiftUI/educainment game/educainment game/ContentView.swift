@@ -52,22 +52,12 @@ struct ContentView: View {
                 List(currentQuestion.allAnswers, id: \.self) { answer in
                     Text(String(answer))
                         .onTapGesture {
-                            
                             respondToAnswerTapped(answer: answer)
                         }
                     
                         .listRowBackground(guess == answer ? Color.green : Color.clear)
         
-                    
-                    
-                    
                 }
-                
-                
-                
-                
-                
-                
                 
             }
             

@@ -28,8 +28,6 @@ struct Question {
 
     }
     
-    
-    
     static func getArray(max: Int) -> [Int] {
         let firstWrong = Int.random(in: 1...max) * Int.random(in: 1...max)
         let secondWrong = Int.random(in: 1...max) * Int.random(in: 1...max)
@@ -37,7 +35,7 @@ struct Question {
         
         var array = [firstWrong, secondWrong, thirdWrong]
         
-        while (!isUnique(array) && max >= 2) {
+        while (!array.isUnique() && max >= 2) {
             
             array.removeFirst()
             
@@ -49,18 +47,14 @@ struct Question {
         
         
     }
+}
 
-    static func getNewNumbers(max: Int) -> [Int] {
-        let firstWrong = Int.random(in: 1...max) * Int.random(in: 1...max)
-        let secondWrong = Int.random(in: 1...max) * Int.random(in: 1...max)
-        let thirdWrong = Int.random(in: 1...max) * Int.random(in: 1...max)
-        
-        return [firstWrong, secondWrong, thirdWrong]
-    }
 
-    static  func isUnique(_ arr: [Int]) -> Bool {
-        var copy = arr
-        
+
+extension [Int] {
+    
+    func isUnique() -> Bool {
+        var copy = self
         
         for number in copy {
             copy.removeFirst()
@@ -73,4 +67,6 @@ struct Question {
     }
     
     
+    
 }
+
