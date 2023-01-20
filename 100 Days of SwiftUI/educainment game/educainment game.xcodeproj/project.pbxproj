@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2EC0DA297B5A63001A28F7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EC0D9297B5A63001A28F7 /* Question.swift */; };
 		9F77071829783CB500B3E56E /* educainment_gameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77071729783CB500B3E56E /* educainment_gameApp.swift */; };
 		9F77071A29783CB500B3E56E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77071929783CB500B3E56E /* ContentView.swift */; };
 		9F77071C29783CB700B3E56E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F77071B29783CB700B3E56E /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F2EC0D9297B5A63001A28F7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		9F77071429783CB500B3E56E /* educainment game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "educainment game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F77071729783CB500B3E56E /* educainment_gameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = educainment_gameApp.swift; sourceTree = "<group>"; };
 		9F77071929783CB500B3E56E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				9F77071729783CB500B3E56E /* educainment_gameApp.swift */,
 				9F77071929783CB500B3E56E /* ContentView.swift */,
+				9F2EC0D9297B5A63001A28F7 /* Question.swift */,
 				9F77071B29783CB700B3E56E /* Assets.xcassets */,
 				9F77071D29783CB700B3E56E /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F2EC0DA297B5A63001A28F7 /* Question.swift in Sources */,
 				9F77071A29783CB500B3E56E /* ContentView.swift in Sources */,
 				9F77071829783CB500B3E56E /* educainment_gameApp.swift in Sources */,
 			);
