@@ -24,25 +24,26 @@ struct Question {
     init(max: Int) {
         firstNumber = Int.random(in: 1...max)
         secondNumber = Int.random(in: 1...max)
-        incorrectAnswers = Question.getArray(max: max)
+        incorrectAnswers = Question.getArray(max: max, correctAnswer: (firstNumber * secondNumber))
 
     }
     
-    static func getArray(max: Int) -> [Int] {
+    static func getArray(max: Int, correctAnswer: Int) -> [Int] {
         let firstWrong = Int.random(in: 1...max) * Int.random(in: 1...max)
         let secondWrong = Int.random(in: 1...max) * Int.random(in: 1...max)
         let thirdWrong = Int.random(in: 1...max) * Int.random(in: 1...max)
-        
+
         var array = [firstWrong, secondWrong, thirdWrong]
-        
-        while (!array.isUnique() && max >= 2) {
-            
+
+        while (!array.isUnique(correctAnswer) && max >= 2) {
+
             array.removeFirst()
-            
+
             array.append(Int.random(in: 1...max))
-            
+
         }
 
+        
         return array
         
         
@@ -53,7 +54,9 @@ struct Question {
 
 extension [Int] {
     
-    func isUnique() -> Bool {
+    func isUnique(_ answer: Int) -> Bool {
+        guard !self.contains(answer) else {return false}
+        
         var copy = self
         
         for number in copy {
