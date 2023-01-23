@@ -16,7 +16,8 @@ protocol APIRequest {
 }
 
 enum APIRequestError: Error {
-    case itemNotFound
+    case animalNotDecoded
+    case pageNotDecoded
 }
 
 func sendRequest<Request: APIRequest>(_ request: Request) async throws -> Request.Response {
@@ -25,7 +26,7 @@ func sendRequest<Request: APIRequest>(_ request: Request) async throws -> Reques
     
     guard let httpResponse = requestData.1 as? HTTPURLResponse, httpResponse.statusCode == 200 else {
         print("Couldn't find data")
-        throw APIRequestError.itemNotFound
+        throw APIRequestError.animalNotDecoded
     }
     
     let decoded = try request.decodeResponse(data: requestData.0)

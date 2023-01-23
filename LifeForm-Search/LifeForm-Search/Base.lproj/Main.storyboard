@@ -76,14 +76,58 @@
                     <connections>
                         <outlet property="searchBar" destination="QN0-iO-6wz" id="UR1-HA-EBY"/>
                         <outlet property="tableView" destination="0CI-rB-7Ls" id="x0T-he-eOl"/>
+                        <segue destination="Wnk-ex-zJL" kind="show" identifier="segueToDetail" destinationCreationSelector="segueToDetail:sender:" id="UjY-Yd-S8u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.76923076923077" y="-34.123222748815166"/>
         </scene>
+        <!--Detail Screen View Controller-->
+        <scene sceneID="WRW-Fb-PNm">
+            <objects>
+                <viewController id="Wnk-ex-zJL" customClass="DetailScreenViewController" customModule="LifeForm_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="of3-5h-EVp">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ffl-aI-uod">
+                                <rect key="frame" x="16" y="92.999999999999986" width="358" height="247.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="247" id="sjS-8p-0cc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtn-Wn-Wrs">
+                                <rect key="frame" x="16" y="349" width="358" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qVu-99-peU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ffl-aI-uod" firstAttribute="trailing" secondItem="qtn-Wn-Wrs" secondAttribute="trailing" id="5fS-gs-cWn"/>
+                            <constraint firstItem="ffl-aI-uod" firstAttribute="top" secondItem="qVu-99-peU" secondAttribute="top" constant="47" id="6Bg-if-cVn"/>
+                            <constraint firstItem="qtn-Wn-Wrs" firstAttribute="top" secondItem="ffl-aI-uod" secondAttribute="bottom" constant="8" symbolic="YES" id="GsQ-dj-0II"/>
+                            <constraint firstItem="qtn-Wn-Wrs" firstAttribute="leading" secondItem="qVu-99-peU" secondAttribute="leading" constant="16" id="dCr-VZ-cDC"/>
+                            <constraint firstItem="qVu-99-peU" firstAttribute="trailing" secondItem="qtn-Wn-Wrs" secondAttribute="trailing" constant="16" id="g4d-wV-nhH"/>
+                            <constraint firstItem="ffl-aI-uod" firstAttribute="leading" secondItem="qtn-Wn-Wrs" secondAttribute="leading" id="vKS-uH-q9I"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="68C-9b-fFV"/>
+                    <connections>
+                        <outlet property="animalImageView" destination="ffl-aI-uod" id="PB7-so-Ce3"/>
+                        <outlet property="scientifcNameLabel" destination="qtn-Wn-Wrs" id="rJ9-Il-7zD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVD-ap-zES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961.53846153846155" y="-27.014218009478672"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var animalToSend: Animal? = nil
+    
  //   @IBOutlet weak var searchTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +51,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
    
-
+   
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell") as! SearchTableViewCell
         let currentResult = results[indexPath.row]
@@ -61,6 +64,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        animalToSend = results[indexPath.row]
+       
+       performSegue(withIdentifier: "segueToDetail", sender: nil)
+
+    }
+    
+    @IBSegueAction func segueToDetail(_ coder: NSCoder, sender: Any?) -> DetailScreenViewController? {
+        
+        let detail = DetailScreenViewController(coder: coder)
+        
+        detail?.animalToShow = animalToSend
+        
+        return detail
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

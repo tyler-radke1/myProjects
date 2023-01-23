@@ -7,28 +7,7 @@
 
 import Foundation
 
-struct Animal: Codable {
-    
-    var id : Int
-    
-    var scientificName : String
-    
-    var commonName : String
-    
-    var link: String
-    
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case scientificName = "title"
-        case commonName = "content"
-        case link
-    }
-}
-
-
-
-
+// The Search request object that returns the inital animal object
 
 struct SearchRequest: APIRequest {
     var search: String
@@ -53,12 +32,10 @@ struct SearchRequest: APIRequest {
             
             return animals
         } else {
-            print("couldn't decode data")
-            throw APIRequestError.itemNotFound
+            print("could not decode animal data")
+            throw APIRequestError.animalNotDecoded
         }
         
     }
 }
-struct Animals: Codable {
-    var results: [Animal]
-}
+
