@@ -8,15 +8,9 @@
 import Foundation
 
 struct TaxonObject: Codable {
-  //  var identifier: Int
+    var identifier: Int
 
     var scientificName: String
-    
- //   var name: String
-    
-  //  var nameAccordingTo: String
-    
-   // var dataObjects: [imageURL]
 }
 
 

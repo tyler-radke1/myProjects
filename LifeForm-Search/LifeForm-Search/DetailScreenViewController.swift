@@ -39,6 +39,8 @@ class DetailScreenViewController: UIViewController {
             
             scientifcNameLabel.text = taxonObject?.scientificName
             
+          
+            
         }
       
     }

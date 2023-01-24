@@ -27,6 +27,7 @@ struct PageRequest: APIRequest {
         
         components.queryItems = queryItems.map { URLQueryItem(name: $0, value: $1) }
     
+        print(components.url!)
         return URLRequest(url: components.url!)
     }
     
