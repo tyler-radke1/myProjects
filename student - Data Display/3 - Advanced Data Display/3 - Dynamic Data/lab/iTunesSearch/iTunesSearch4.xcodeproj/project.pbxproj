@@ -18,6 +18,8 @@
 		18A6053323CF9ADA002037CA /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053223CF9ADA002037CA /* ItemTableViewCell.swift */; };
 		18A6053523CFABBB002037CA /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053423CFABBB002037CA /* StoreItem.swift */; };
 		18A6053723CFABDC002037CA /* StoreItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053623CFABDC002037CA /* StoreItemController.swift */; };
+		9F1B9CEE298704C700EB617B /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B9CED298704C700EB617B /* ItemCollectionViewCell.swift */; };
+		9F1B9CF029871E1F00EB617B /* ItemDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B9CEF29871E1F00EB617B /* ItemDisplaying.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		18A6053223CF9ADA002037CA /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		18A6053423CFABBB002037CA /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
 		18A6053623CFABDC002037CA /* StoreItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemController.swift; sourceTree = "<group>"; };
+		9F1B9CED298704C700EB617B /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		9F1B9CEF29871E1F00EB617B /* ItemDisplaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDisplaying.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				18A6053023CF9829002037CA /* StoreItemListTableViewController.swift */,
 				1812E9A223F36978009BBFA7 /* StoreItemCollectionViewController.swift */,
 				1812E9A023F35901009BBFA7 /* StoreItemContainerViewController.swift */,
+				9F1B9CEF29871E1F00EB617B /* ItemDisplaying.swift */,
+				9F1B9CED298704C700EB617B /* ItemCollectionViewCell.swift */,
 				18A6052523CF9803002037CA /* Assets.xcassets */,
 				18A6052723CF9803002037CA /* LaunchScreen.storyboard */,
 				18A6052223CF9802002037CA /* Main.storyboard */,
@@ -155,6 +161,8 @@
 				18A6053323CF9ADA002037CA /* ItemTableViewCell.swift in Sources */,
 				1812E9A323F36978009BBFA7 /* StoreItemCollectionViewController.swift in Sources */,
 				18A6053523CFABBB002037CA /* StoreItem.swift in Sources */,
+				9F1B9CEE298704C700EB617B /* ItemCollectionViewCell.swift in Sources */,
+				9F1B9CF029871E1F00EB617B /* ItemDisplaying.swift in Sources */,
 				18A6053723CFABDC002037CA /* StoreItemController.swift in Sources */,
 				18A6053123CF9829002037CA /* StoreItemListTableViewController.swift in Sources */,
 				18A6051D23CF9802002037CA /* AppDelegate.swift in Sources */,
@@ -307,6 +315,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iTunesSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,6 +333,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iTunesSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

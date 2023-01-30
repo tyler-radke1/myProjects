@@ -20,6 +20,7 @@
 		18A6053323CF9ADA002037CA /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053223CF9ADA002037CA /* ItemTableViewCell.swift */; };
 		18A6053523CFABBB002037CA /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053423CFABBB002037CA /* StoreItem.swift */; };
 		18A6053723CFABDC002037CA /* StoreItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053623CFABDC002037CA /* StoreItemController.swift */; };
+		9FA14C7E2987512F00077EC4 /* SearchScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA14C7D2987512F00077EC4 /* SearchScope.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		18A6053223CF9ADA002037CA /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		18A6053423CFABBB002037CA /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
 		18A6053623CFABDC002037CA /* StoreItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemController.swift; sourceTree = "<group>"; };
+		9FA14C7D2987512F00077EC4 /* SearchScope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScope.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				18A6052523CF9803002037CA /* Assets.xcassets */,
 				18A6052723CF9803002037CA /* LaunchScreen.storyboard */,
 				18A6052223CF9802002037CA /* Main.storyboard */,
+				9FA14C7D2987512F00077EC4 /* SearchScope.swift */,
 			);
 			path = iTunesSearch;
 			sourceTree = "<group>";
@@ -122,7 +125,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 18A6051423CF9802002037CA /* Build configuration list for PBXProject "iTunesSearch" */;
+			buildConfigurationList = 18A6051423CF9802002037CA /* Build configuration list for PBXProject "iTunesSearch5" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A6053323CF9ADA002037CA /* ItemTableViewCell.swift in Sources */,
+				9FA14C7E2987512F00077EC4 /* SearchScope.swift in Sources */,
 				1812E9A323F36978009BBFA7 /* StoreItemCollectionViewController.swift in Sources */,
 				18A6053523CFABBB002037CA /* StoreItem.swift in Sources */,
 				1821478F23F602F3005B6EFE /* ItemCollectionViewCell.swift in Sources */,
@@ -346,7 +350,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18A6051423CF9802002037CA /* Build configuration list for PBXProject "iTunesSearch" */ = {
+		18A6051423CF9802002037CA /* Build configuration list for PBXProject "iTunesSearch5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18A6052B23CF9803002037CA /* Debug */,

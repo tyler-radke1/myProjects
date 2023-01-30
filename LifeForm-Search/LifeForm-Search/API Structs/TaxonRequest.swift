@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PageRequest: APIRequest {
+struct TaxonRequest: APIRequest {
     var animalID: String
 
     var urlRequest: URLRequest {
@@ -27,21 +27,25 @@ struct PageRequest: APIRequest {
         
         components.queryItems = queryItems.map { URLQueryItem(name: $0, value: $1) }
     
-        print(components.url!)
+    
         return URLRequest(url: components.url!)
     }
     
     
     func decodeResponse(data: Data) throws -> BaseObject {
+        //print(data.prettyPrintedJsonString())
+        
         if let page = try? JSONDecoder().decode(BaseObject.self, from: data) {
             return page
         } else {
 
-            print("Could not decode page data")
+           // print("Could not decode page data")
             throw APIRequestError.pageNotDecoded
         }
     }
 
+    
+    
 
 
 }

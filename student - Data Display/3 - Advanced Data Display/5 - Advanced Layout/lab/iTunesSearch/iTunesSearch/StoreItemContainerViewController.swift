@@ -13,16 +13,24 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
     var tableViewDataSource: UITableViewDiffableDataSource<String, StoreItem>!
     var collectionViewDataSource: UICollectionViewDiffableDataSource<String, StoreItem>!
     
-    var items = [StoreItem]()
-    var itemsSnapshot: NSDiffableDataSourceSnapshot<String, StoreItem> {
+  //  var items = [StoreItem]()
+   var itemsSnapshot: NSDiffableDataSourceSnapshot<String, StoreItem> {
+
         var snapshot = NSDiffableDataSourceSnapshot<String, StoreItem>()
         snapshot.appendSections(["Results"])
-        snapshot.appendItems(items)
-        
+      //  snapshot.appendItems(items)
+
         return snapshot
     }
     
-    let queryOptions = ["movie", "music", "software", "ebook"]
+    
+    var selectedSearchScope: SearchScope {
+        let selected = searchController.searchBar.selectedScopeButtonIndex
+        
+        return SearchScope.allCases[selected]
+        
+        
+    }
     
     // keep track of async tasks so they can be cancelled if appropriate.
     var searchTask: Task<Void, Never>? = nil
@@ -37,7 +45,7 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.automaticallyShowsSearchResultsController = true
         searchController.searchBar.showsScopeBar = true
-        searchController.searchBar.scopeButtonTitles = ["Movies", "Music", "Apps", "Books"]
+        searchController.searchBar.scopeButtonTitles = SearchScope.allCases.map({$0.title})
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -89,11 +97,11 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
     }
     
     @objc func fetchMatchingItems() {
-        
-        self.items = []
+        itemsSnapshot.deleteAllItems()
+     //   self.items = []
         
         let searchTerm = searchController.searchBar.text ?? ""
-        let mediaType = queryOptions[searchController.searchBar.selectedScopeButtonIndex]
+       
         
         // cancel any images that are still being fetched and reset the imageTask dictionaries
         collectionViewImageLoadTasks.values.forEach { task in task.cancel() }
@@ -109,7 +117,7 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
                 // set up query dictionary
                 let query = [
                     "term": searchTerm,
-                    "media": mediaType,
+                    "media": selectedSearchScope.mediaType,
                     "lang": "en_us",
                     "limit": "20"
                 ]
@@ -118,8 +126,8 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
                     // use the item controller to fetch items
                     let items = try await storeItemController.fetchItems(matching: query)
                     if searchTerm == self.searchController.searchBar.text &&
-                          mediaType == queryOptions[searchController.searchBar.selectedScopeButtonIndex] {
-                        self.items = items
+                        query["media"] == selectedSearchScope.mediaType {
+                    //    self.items = items
                     }
                 } catch let error as NSError where error.domain == NSURLErrorDomain && error.code == NSURLErrorCancelled {
                     // ignore cancellation errors

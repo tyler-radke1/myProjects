@@ -11,6 +11,8 @@ struct TaxonObject: Codable {
     var identifier: Int
 
     var scientificName: String
+    
+    var dataObjects: [DataObject]
 }
 
 
@@ -19,6 +21,7 @@ struct BaseObject: Codable {
     
 }
 
-struct imageURL: Codable {
-    var eolMediaURl: String
+struct DataObject: Codable {
+    var mediaURL: String
+    var license: String
 }

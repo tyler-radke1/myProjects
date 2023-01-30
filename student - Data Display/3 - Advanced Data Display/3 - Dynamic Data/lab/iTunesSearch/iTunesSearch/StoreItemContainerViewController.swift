@@ -6,11 +6,24 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
     @IBOutlet var tableContainerView: UIView!
     @IBOutlet var collectionContainerView: UIView!
     
+    var tableViewDataSource: UITableViewDiffableDataSource<String, StoreItem>!
+    var collectionViewDataSource: UICollectionViewDiffableDataSource<String, StoreItem>!
+    
+    
     let searchController = UISearchController()
     let storeItemController = StoreItemController()
     
     var items = [StoreItem]()
 
+    var itemsSnapshot: NSDiffableDataSourceSnapshot<String, StoreItem> {
+        var snapshot = NSDiffableDataSourceSnapshot<String, StoreItem>()
+        
+        snapshot.appendSections(["Results"])
+        snapshot.appendItems(items)
+        
+        return snapshot
+    }
+        
     let queryOptions = ["movie", "music", "software", "ebook"]
     
     // keep track of async tasks so they can be cancelled if appropriate.
@@ -29,6 +42,49 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
         searchController.searchBar.scopeButtonTitles = ["Movies", "Music", "Apps", "Books"]
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tableViewController = segue.destination as? StoreItemListTableViewController {
+            configureDataSource(tableViewController.tableView)
+        }
+        
+        if let collectionView = segue.destination as? StoreItemCollectionViewController {
+            configureCollectionViewDataSource(collectionView.collectionView)
+        }
+    }
+    
+    func configureDataSource(_ tableView: UITableView) {
+        
+        tableViewDataSource = UITableViewDiffableDataSource<String, StoreItem> (tableView: tableView, cellProvider: {(tableView, indexPath, item) -> UITableViewCell? in
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Item", for: indexPath) as! ItemTableViewCell
+            
+            self.tableViewImageLoadTasks[indexPath]?.cancel()
+            
+            self.tableViewImageLoadTasks[indexPath] = Task {
+                await cell.configure(for: item, storeItemController: self.storeItemController)
+                self.tableViewImageLoadTasks[indexPath] = nil
+            }
+            
+            
+            return cell
+        })
+    }
+    
+    func configureCollectionViewDataSource(_ collectionView: UICollectionView) {
+        collectionViewDataSource = .init(collectionView: collectionView, cellProvider: { (collectionView, indexPath, item) -> UICollectionViewCell? in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Item", for: indexPath) as! ItemCollectionViewCell
+            
+            self.collectionViewImageLoadTasks[indexPath]?.cancel()
+            self.collectionViewImageLoadTasks[indexPath] = Task {
+                await cell.configure(for: item, storeItemController: self.storeItemController)
+                self.collectionViewImageLoadTasks[indexPath] = nil
+            }
+            
+            return cell
+        })
+    }
+    
+    
     func updateSearchResults(for searchController: UISearchController) {
         NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(fetchMatchingItems), object: nil)
         perform(#selector(fetchMatchingItems), with: nil, afterDelay: 0.3)
@@ -45,6 +101,11 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
                 
         let searchTerm = searchController.searchBar.text ?? ""
         let mediaType = queryOptions[searchController.searchBar.selectedScopeButtonIndex]
+        
+        collectionViewImageLoadTasks.values.forEach { task in task.cancel() }
+        collectionViewImageLoadTasks = [:]
+        tableViewImageLoadTasks.values.forEach { task in task.cancel() }
+        tableViewImageLoadTasks = [:]
         
         // cancel existing task since we will not use the result
         searchTask?.cancel()
@@ -73,8 +134,14 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
                     // otherwise, print an error to the console
                     print(error)
                 }
+                
+                await tableViewDataSource.apply(itemsSnapshot)
+                await collectionViewDataSource.apply(itemsSnapshot)
                 // apply data source changes
             } else {
+                
+                await tableViewDataSource.apply(itemsSnapshot)
+                await collectionViewDataSource.apply(itemsSnapshot)
                 // apply data source changes
             }
             searchTask = nil
