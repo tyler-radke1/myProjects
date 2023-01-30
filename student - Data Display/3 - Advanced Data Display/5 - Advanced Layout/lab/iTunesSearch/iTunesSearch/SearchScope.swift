@@ -36,3 +36,8 @@ case all, music, movies, apps, books
     
     
 }
+
+
+
+
+func fetchAndHandleItemsForSearchScopes(_ searchScopes:​    [SearchScope], withSearchTerm searchTerm: String)​    async throws ​    {​      try await withThrowingTaskGroup(of: (SearchScope,​         [StoreItem]).self) { group in​          for searchScope in searchScopes { group.addTask { ​                try Task.checkCancellation()​                // Set up query dictionary​                let query = [​                   "term": searchTerm,​                   "media": searchScope.mediaType,​                   "lang": "en_us",​                   "limit": "50" ​                 ]​                 return (searchScope, try await​                    self.storeItemController.fetchItems(matching:​                       query))​            }​        }​        for try await (searchScope, items) in group {​            try Task.checkCancellation() if searchTerm ==​               self.searchController.searchBar.text && ​                  (self.selectedSearchScope == .all || searchScope​                     == self.selectedSearchScope) {​               await handleFetchedItems(items)​             }​        }​     }​ }
