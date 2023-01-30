@@ -88,10 +88,32 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
         tableContainerView.isHidden.toggle()
         collectionContainerView.isHidden.toggle()
     }
+    func handleFetchedItems(_ items: [StoreItem]) async {
+        await tableViewDataSource.apply(itemsSnapshot, animatingDifferences: true)
+        await collectionViewDataSource.apply(itemsSnapshot, animatingDifferences: true)
+    }
     
+<<<<<<< HEAD
     func createSectionedSnapshot(from items: [StoreItem]) -> NSDiffableDataSourceSnapshot<String, StoreItem> {
         let movies = items.filter({ $0.kind == "feature-movie"})
         let music = items.filter{ $0.kind == "song" || $0.kind == "album"}
+=======
+    func fetchAndHandleItemsForSearchScopes( searchScopes: [SearchScope], withSearchTerm searchTerm: String) async throws {
+        try await withThrowingTaskGroup(of: (SearchScope, [StoreItem]).self) { group in
+            
+            for searchScope in searchScopes { group.addTask(operation: <#T##() async throws -> (SearchScope, [StoreItem])#>)
+                
+            }
+            
+            
+            
+            
+        }
+    }
+    @objc func fetchMatchingItems() {
+        //itemsSnapshot.deleteAllItems()
+     //   self.items = []
+>>>>>>> a27f7654c116ec5ede4cdf156fd486a58e7febe7
         
         let apps = items.filter({ $0.kind == "software" })
         let books = items.filter({ $0.kind == "ebook"})
@@ -161,12 +183,19 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
         itemsSnapshot.deleteAllItems()
         let searchTerm = searchController.searchBar.text ?? ""
        
+<<<<<<< HEAD
         let searchScopes: [SearchScope]
         if selectedSearchScope == .all {
             searchScopes = [.movies, .music, .apps, .books]
         } else {
             searchScopes = [selectedSearchScope]
         }
+=======
+        var searchScopes: [SearchScope] = (selectedSearchScope == .all) ? [.movies, .music, .apps, .books] : [selectedSearchScope]
+        
+      
+        
+>>>>>>> a27f7654c116ec5ede4cdf156fd486a58e7febe7
         
         
         // cancel any images that are still being fetched and reset the imageTask dictionaries
@@ -180,6 +209,7 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
          searchTask = Task {
             if !searchTerm.isEmpty {
                 do {
+<<<<<<< HEAD
                     try await fetchAndHandleItemsForSearchScopes(searchScopes, withSearchTerm: searchTerm)
                 } catch let error as NSError where error.domain == NSURLErrorDomain && error.code == NSURLErrorCancelled {
                     // ignore cancellation errors from URLSession
@@ -187,6 +217,13 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
                     // ignore cancellation errors from the TaskGroup
                 } catch {
                     print(error)
+=======
+                    try await fetchAndHandleItemsForSearchScopes(searchScopes: searchScopes, withSearchTerm: searchTerm)
+                } catch let error as NSError where error.domain == NSURLErrorDomain && error.code == NSURLErrorCancelled {
+                    
+                } catch {
+                    print("error")
+>>>>>>> a27f7654c116ec5ede4cdf156fd486a58e7febe7
                 }
             } else {
                 await self.tableViewDataSource.apply(self.itemsSnapshot, animatingDifferences: true)
